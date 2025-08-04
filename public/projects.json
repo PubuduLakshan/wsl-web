@@ -1,0 +1,182 @@
+{
+  "upcomingEvents": [
+    {
+      "id": 1,
+      "title": "Wildlife Photography Workshop 2025",
+      "description": "Join our expert-led workshop to master wildlife photography techniques in the heart of Sri Lanka's national parks. Learn advanced camera settings, animal behavior prediction, and ethical photography practices.",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+      "date": "2025-03-15",
+      "location": "Yala National Park",
+      "category": "Workshop",
+      "spots": 15,
+      "price": "$299"
+    },
+    {
+      "id": 2,
+      "title": "Conservation Photography Exhibition",
+      "description": "Experience the power of photography in conservation through our curated exhibition featuring award-winning wildlife images and conservation success stories from across Sri Lanka.",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      "date": "2025-04-20",
+      "location": "Colombo Art Gallery",
+      "category": "Exhibition",
+      "spots": 50,
+      "price": "Free"
+    },
+    {
+      "id": 3,
+      "title": "Bird Photography Masterclass",
+      "description": "Specialized workshop focusing on avian photography techniques, bird identification, and capturing the perfect bird in flight shots in Sri Lanka's diverse ecosystems.",
+      "image": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80",
+      "date": "2025-05-10",
+      "location": "Sinharaja Forest Reserve",
+      "category": "Masterclass",
+      "spots": 10,
+      "price": "$399"
+    }
+  ],
+  "pastEvents": [
+    {
+      "id": 4,
+      "title": "Wildlife Photography Competition 2024",
+      "description": "Our annual photography competition brought together over 200 photographers from around the world, showcasing the incredible biodiversity of Sri Lanka through stunning imagery.",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-12-15",
+      "location": "Online & Gallery",
+      "category": "Competition",
+      "participants": 200,
+      "winners": 3
+    },
+    {
+      "id": 5,
+      "title": "Conservation Awareness Campaign",
+      "description": "A comprehensive campaign to raise awareness about endangered species in Sri Lanka, featuring photography exhibitions, school visits, and community engagement programs.",
+      "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-11-20",
+      "location": "Multiple Locations",
+      "category": "Awareness",
+      "reach": 5000,
+      "schools": 25
+    },
+    {
+      "id": 6,
+      "title": "Photography Equipment Workshop",
+      "description": "Hands-on workshop covering camera equipment, lens selection, and maintenance for wildlife photography, helping photographers optimize their gear for field work.",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-10-05",
+      "location": "Wild Sri Lanka Studio",
+      "category": "Workshop",
+      "participants": 30,
+      "duration": "2 days"
+    },
+    {
+      "id": 7,
+      "title": "Marine Life Photography Expedition",
+      "description": "Exclusive expedition to capture marine life around Sri Lanka's coastal waters, featuring whales, dolphins, and diverse marine ecosystems through underwater photography.",
+      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-09-15",
+      "location": "Southern Coast",
+      "category": "Expedition",
+      "participants": 12,
+      "duration": "5 days"
+    },
+    {
+      "id": 8,
+      "title": "Student Photography Mentorship",
+      "description": "Educational program designed for young photographers, providing mentorship, equipment access, and field experience in wildlife photography and conservation.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-08-30",
+      "location": "Various National Parks",
+      "category": "Education",
+      "students": 45,
+      "duration": "3 months"
+    },
+    {
+      "id": 9,
+      "title": "Documentary Photography Project",
+      "description": "Comprehensive documentation of Sri Lanka's wildlife conservation efforts, creating visual stories that highlight the challenges and successes in protecting biodiversity.",
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-07-20",
+      "location": "Countrywide",
+      "category": "Documentary",
+      "duration": "6 months",
+      "publications": 5
+    },
+    {
+      "id": 10,
+      "title": "Camera Trap Installation Project",
+      "description": "Scientific project installing camera traps across protected areas to monitor wildlife populations and gather data for conservation research and management.",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-06-10",
+      "location": "Protected Areas",
+      "category": "Research",
+      "traps": 50,
+      "species": 15
+    },
+    {
+      "id": 11,
+      "title": "Photography Ethics Workshop",
+      "description": "Educational workshop focusing on ethical wildlife photography practices, ensuring minimal disturbance to animals while capturing compelling images.",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-05-25",
+      "location": "Online",
+      "category": "Education",
+      "participants": 75,
+      "duration": "1 day"
+    },
+    {
+      "id": 12,
+      "title": "Wildlife Rehabilitation Photography",
+      "description": "Documentation project capturing the rehabilitation process of injured wildlife, raising awareness about wildlife rescue and rehabilitation efforts in Sri Lanka.",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-04-15",
+      "location": "Wildlife Centers",
+      "category": "Documentation",
+      "animals": 25,
+      "duration": "4 months"
+    },
+    {
+      "id": 13,
+      "title": "Community Photography Training",
+      "description": "Empowering local communities through photography training, enabling them to document their natural resources and contribute to conservation efforts.",
+      "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-03-20",
+      "location": "Rural Communities",
+      "category": "Community",
+      "participants": 60,
+      "villages": 8
+    },
+    {
+      "id": 14,
+      "title": "Aerial Photography Project",
+      "description": "Innovative project using drone photography to capture unique perspectives of Sri Lanka's landscapes and wildlife from above.",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-02-28",
+      "location": "Various Locations",
+      "category": "Innovation",
+      "flights": 40,
+      "coverage": "5000 km²"
+    },
+    {
+      "id": 15,
+      "title": "Night Photography Workshop",
+      "description": "Specialized workshop teaching night photography techniques for capturing nocturnal wildlife and creating stunning low-light wildlife images.",
+      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-01-15",
+      "location": "Wilpattu National Park",
+      "category": "Workshop",
+      "participants": 20,
+      "duration": "3 days"
+    },
+    {
+      "id": 16,
+      "title": "Photography Equipment Donation",
+      "description": "Charity project donating photography equipment to schools and conservation organizations to support their documentation and educational efforts.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+      "date": "2024-01-05",
+      "location": "Multiple Recipients",
+      "category": "Charity",
+      "equipment": 50,
+      "recipients": 15
+    }
+  ]
+} 

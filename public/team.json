@@ -1,0 +1,103 @@
+{
+  "boardOfficials": [
+    {
+      "name": "Niro Genzarry",
+      "position": "President",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "position": "Vice President",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Max Collins",
+      "position": "Secretary",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Niro Genzarry",
+      "position": "Treasurer",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "position": "Board Member",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Max Collins",
+      "position": "Board Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Niro Genzarry",
+      "position": "Board Member",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "position": "Board Member",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Max Collins",
+      "position": "Board Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Niro Genzarry",
+      "position": "Board Member",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "position": "Board Member",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Max Collins",
+      "position": "Board Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+  "moderaTeam": [
+    {
+      "name": "Niro Genzarry",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Max Collins",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Niro Genzarry",
+      "email": "nina.genzarry@team.collection",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "name": "Clara Huel",
+      "email": "clara.huel@team.collection",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+    }
+  ]
+} 

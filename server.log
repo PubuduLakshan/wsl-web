@@ -1,0 +1,9 @@
+   ▲ Next.js 15.4.2
+   - Local:        http://localhost:3000
+   - Network:      http://172.31.128.27:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 12.3s (1566 modules)
+ GET / 200 in 13262ms
