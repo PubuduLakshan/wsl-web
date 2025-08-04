@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Navbar } from '../components/header'
 import { ContactSection } from '../components/contact-section'
 import { Footer } from '../components/footer'
-import Link from 'next/link'
+import { Link } from 'wouter'
 import { useTheme } from '../components/theme-provider'
 
 interface NewsItem {

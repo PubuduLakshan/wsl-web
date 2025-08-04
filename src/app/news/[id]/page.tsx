@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'wouter'
 import { Navbar } from '../../../components/header'
 import { ContactSection } from '../../../components/contact-section'
 import { Footer } from '../../../components/footer'
