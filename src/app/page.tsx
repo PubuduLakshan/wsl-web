@@ -289,33 +289,33 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8">
-          <div className="flex items-center justify-center h-screen">
-            {/* Text Content - Centered on mobile, left-aligned on desktop */}
-            <div className="text-white text-center md:text-left md:max-w-2xl">
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 md:px-4 py-2 rounded-full mb-4 md:mb-6">
-                <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#F0A641' }}></div>
-                <span className="text-xs md:text-sm font-medium">{heroSlides[currentHeroSlide].badge}</span>
-              </div>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-white whitespace-pre-line">
-                {heroSlides[currentHeroSlide].title}
-              </h1>
-              <p className="text-base md:text-xl mb-6 md:mb-10 text-gray-300 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                {heroSlides[currentHeroSlide].description}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
-                <button className="group relative px-6 md:px-8 py-3 md:py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm md:text-base" style={{ backgroundColor: '#F0A641' }}>
-                  <span className="relative z-10">{heroSlides[currentHeroSlide].primaryButton}</span>
-                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
-                </button>
-                <button className="px-6 md:px-8 py-3 md:py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-sm md:text-base">
-                  {heroSlides[currentHeroSlide].secondaryButton}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+                 {/* Hero Content */}
+         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-8">
+           <div className="flex items-center h-screen">
+             {/* Text Content - Left-aligned on all devices */}
+             <div className="text-white text-left max-w-2xl">
+               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 md:px-4 py-2 rounded-full mb-4 md:mb-6">
+                 <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#F0A641' }}></div>
+                 <span className="text-xs md:text-sm font-medium">{heroSlides[currentHeroSlide].badge}</span>
+               </div>
+               <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-white whitespace-pre-line">
+                 {heroSlides[currentHeroSlide].title}
+               </h1>
+               <p className="text-base md:text-xl mb-6 md:mb-10 text-gray-300 max-w-lg leading-relaxed">
+                 {heroSlides[currentHeroSlide].description}
+               </p>
+               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start">
+                 <button className="group relative px-6 md:px-8 py-3 md:py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl text-sm md:text-base" style={{ backgroundColor: '#F0A641' }}>
+                   <span className="relative z-10">{heroSlides[currentHeroSlide].primaryButton}</span>
+                   <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
+                 </button>
+                 <button className="px-6 md:px-8 py-3 md:py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-sm md:text-base">
+                   {heroSlides[currentHeroSlide].secondaryButton}
+                 </button>
+               </div>
+             </div>
+           </div>
+         </div>
 
         {/* Navigation Arrows */}
         <button 
