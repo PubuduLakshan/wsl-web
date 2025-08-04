@@ -9,7 +9,7 @@ const NewsDetailWrapper = () => {
     return <div>News not found</div>
   }
 
-  return <NewsDetailPage params={Promise.resolve({ id: params.id })} />
+  return <NewsDetailPage params={{ id: params.id }} />
 }
 
 export default NewsDetailWrapper 

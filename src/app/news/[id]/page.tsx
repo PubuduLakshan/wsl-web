@@ -1,22 +1,10 @@
-import React from 'react'
+"use client"
+
+import React, { useState, useEffect } from 'react'
 import { Link } from 'wouter'
 import { Navbar } from '../../../components/header'
 import { ContactSection } from '../../../components/contact-section'
 import { Footer } from '../../../components/footer'
-
-// Generate static params for all news articles
-export async function generateStaticParams() {
-  // This function is required for static export
-  // It tells Next.js which dynamic routes to pre-generate
-  return [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' },
-    { id: '4' },
-    { id: '5' },
-    { id: '6' }
-  ]
-}
 
 interface NewsItem {
   id: number
@@ -31,38 +19,82 @@ interface NewsItem {
   tags?: string[]
 }
 
-export default async function NewsDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  // Await params to fix the async issue
-  const { id: idParam } = await params
-  
-  // Load news data from JSON file
-  let newsData: NewsItem[] = []
-  try {
-    const response = await fetch('http://localhost:3000/news.json')
-    if (response.ok) {
-      newsData = await response.json()
-    }
-  } catch (error) {
-    console.error('Error loading news data:', error)
-    // Fallback data if JSON loading fails
-    newsData = [
-      {
-        id: 1,
-        newsId: "leopard-population-discovery",
-        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-        title: "New Leopard Population Discovered in Yala National Park",
-        description: "Conservationists have identified a previously unknown population of Sri Lankan leopards in the remote regions of Yala National Park. This discovery marks a significant milestone in wildlife conservation efforts.",
-        date: "2024-12-15",
-        author: "Wild Sri Lanka Team",
-        category: "Conservation",
-        tags: ["leopard", "yala", "conservation", "wildlife"],
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\nUt enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+interface NewsDetailPageProps {
+  params: { id: string }
+}
+
+export default function NewsDetailPage({ params }: NewsDetailPageProps) {
+  const [newsData, setNewsData] = useState<NewsItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    const loadNewsData = async () => {
+      try {
+        const response = await fetch('/news.json')
+        if (response.ok) {
+          const data = await response.json()
+          setNewsData(data)
+        } else {
+          throw new Error('Failed to load news data')
+        }
+      } catch (error) {
+        console.error('Error loading news data:', error)
+        // Fallback data if JSON loading fails
+        setNewsData([
+          {
+            id: 1,
+            newsId: "leopard-population-discovery",
+            image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+            title: "New Leopard Population Discovered in Yala National Park",
+            description: "Conservationists have identified a previously unknown population of Sri Lankan leopards in the remote regions of Yala National Park. This discovery marks a significant milestone in wildlife conservation efforts.",
+            date: "2024-12-15",
+            author: "Wild Sri Lanka Team",
+            category: "Conservation",
+            tags: ["leopard", "yala", "conservation", "wildlife"],
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\nUt enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          }
+        ])
+      } finally {
+        setLoading(false)
       }
-    ]
+    }
+
+    loadNewsData()
+  }, [])
+
+  const id = parseInt(params.id)
+  const newsItem = newsData.find(item => item.id === id)
+
+  const formatDate = (dateString: string) => {
+    try {
+      const date = new Date(dateString)
+      if (isNaN(date.getTime())) {
+        return "Date not available"
+      }
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    } catch (error) {
+      return "Date not available"
+    }
   }
 
-  const id = parseInt(idParam)
-  const newsItem = newsData.find(item => item.id === id)
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading article...</p>
+          </div>
+        </div>
+      </>
+    )
+  }
 
   if (!newsItem) {
     return (
@@ -83,22 +115,6 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
 
   // Use the news item directly since it now contains all the data from JSON
   const fullContent = newsItem
-
-  const formatDate = (dateString: string) => {
-    try {
-      const date = new Date(dateString)
-      if (isNaN(date.getTime())) {
-        return "Date not available"
-      }
-      return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      })
-    } catch (error) {
-      return "Date not available"
-    }
-  }
 
   return (
     <>
