@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Router, Route } from 'wouter'
 import HomePage from './app/page'
 import AboutUsPage from './app/about-us/page'
 import TeamPage from './app/team/page'
@@ -11,15 +11,13 @@ import ProjectsPage from './app/projects/page'
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/news/:id" element={<NewsDetailWrapper />} />
-        <Route path="/wpoty" element={<WpotyPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-      </Routes>
+      <Route path="/" component={HomePage} />
+      <Route path="/about-us" component={AboutUsPage} />
+      <Route path="/team" component={TeamPage} />
+      <Route path="/news" component={NewsPage} />
+      <Route path="/news/:id" component={NewsDetailWrapper} />
+      <Route path="/wpoty" component={WpotyPage} />
+      <Route path="/projects" component={ProjectsPage} />
     </Router>
   )
 }

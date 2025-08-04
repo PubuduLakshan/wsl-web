@@ -1,17 +1,16 @@
 "use client"
 
 import React from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, useLocation } from 'wouter'
 
 export function Navbar() {
-  const pathname = usePathname()
+  const [location] = useLocation()
 
   const isActive = (path: string) => {
     if (path === '/') {
-      return pathname === '/'
+      return location === '/'
     }
-    return pathname.startsWith(path)
+    return location.startsWith(path)
   }
 
   const getLinkClasses = (path: string) => {
@@ -44,27 +43,27 @@ export function Navbar() {
 
       {/* Navigation - Right Side */}
       <div className="flex items-center gap-8">
-        <Link to="/" className={getLinkClasses('/')}>
+        <Link href="/" className={getLinkClasses('/')}>
           HOME
           <div className={getUnderlineClasses('/')}></div>
         </Link>
-        <Link to="/wpoty" className={getLinkClasses('/wpoty')}>
+        <Link href="/wpoty" className={getLinkClasses('/wpoty')}>
           WPOTY
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
-        <Link to="/projects" className={getLinkClasses('/projects')}>
+        <Link href="/projects" className={getLinkClasses('/projects')}>
           PROJECTS
           <div className={getUnderlineClasses('/projects')}></div>
         </Link>
-        <Link to="/news" className={getLinkClasses('/news')}>
+        <Link href="/news" className={getLinkClasses('/news')}>
           NEWS
           <div className={getUnderlineClasses('/news')}></div>
         </Link>
-        <Link to="/team" className={getLinkClasses('/team')}>
+        <Link href="/team" className={getLinkClasses('/team')}>
           OUR TEAM
           <div className={getUnderlineClasses('/team')}></div>
         </Link>
-        <Link to="/about-us" className={getLinkClasses('/about-us')}>
+        <Link href="/about-us" className={getLinkClasses('/about-us')}>
           ABOUT US
           <div className={getUnderlineClasses('/about-us')}></div>
         </Link>
