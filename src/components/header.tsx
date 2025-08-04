@@ -44,27 +44,27 @@ export function Navbar() {
 
       {/* Navigation - Right Side */}
       <div className="flex items-center gap-8">
-        <Link href="/" className={getLinkClasses('/')}>
+        <Link to="/" className={getLinkClasses('/')}>
           HOME
           <div className={getUnderlineClasses('/')}></div>
         </Link>
-        <Link href="/wpoty" className={getLinkClasses('/wpoty')}>
+        <Link to="/wpoty" className={getLinkClasses('/wpoty')}>
           WPOTY
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
-        <Link href="/projects" className={getLinkClasses('/projects')}>
+        <Link to="/projects" className={getLinkClasses('/projects')}>
           PROJECTS
           <div className={getUnderlineClasses('/projects')}></div>
         </Link>
-        <Link href="/news" className={getLinkClasses('/news')}>
+        <Link to="/news" className={getLinkClasses('/news')}>
           NEWS
           <div className={getUnderlineClasses('/news')}></div>
         </Link>
-        <Link href="/team" className={getLinkClasses('/team')}>
+        <Link to="/team" className={getLinkClasses('/team')}>
           OUR TEAM
           <div className={getUnderlineClasses('/team')}></div>
         </Link>
-        <Link href="/about-us" className={getLinkClasses('/about-us')}>
+        <Link to="/about-us" className={getLinkClasses('/about-us')}>
           ABOUT US
           <div className={getUnderlineClasses('/about-us')}></div>
         </Link>
