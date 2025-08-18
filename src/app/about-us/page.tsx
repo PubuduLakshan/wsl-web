@@ -21,10 +21,10 @@ export default function AboutUsPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
             <div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              In November 2015, a passionate group of photographers, driven by their love for nature and wildlife, laid the foundation for "Wild Sri Lanka." Our community, initially formed on social media, was conceived with a noble vision: to contribute to the conservation of Sri Lankan wildlife and elevate the standard of wildlife photography to an international level.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Over the years, our community has experienced remarkable growth, evolving into the largest wildlife photography hub in Sri Lanka, boasting over 49,000 members. Committed to our primary goal of wildlife conservation, we have successfully executed various projects that have become landmarks within the global wildlife photography community.
               </p>
             </div>
             <div>
@@ -40,6 +40,20 @@ export default function AboutUsPage() {
 
       {/* OUR MISSION Section */}
       <section className="py-20" style={{ backgroundColor: '#F0A641' }}>
+      <div className="max-w-6xl mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-white">OUR VISION</h2>
+            <div className="w-24 h-1 bg-white"></div>
+          </div>
+          
+          <div className="max-w-4xl">
+           <p className="text-xl text-white leading-relaxed">
+           To promote wildlife photography as a tool of wildlife conservation.
+          </p>
+          </div>
+        </div>
+        <br />
+        <br />
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
             <h2 className="text-4xl font-bold mb-4 text-white">OUR MISSION</h2>
@@ -47,9 +61,9 @@ export default function AboutUsPage() {
           </div>
           
           <div className="max-w-4xl">
-            <p className="text-xl text-white leading-relaxed">
-              Wild Srilanka is dedicated to nature and wildlife photography, managed by Wild Unlimited. We serve as a platform for showcasing talents in wildlife photography to local and international arenas. Our commitment is to preserve and celebrate the natural beauty of Sri Lanka through the art of photography.
-            </p>
+           <p className="text-xl text-white leading-relaxed">
+            Create awareness and inspire the public about the magnificent fauna and Flora of this country so they yield sincere initiatives for the conservation of Sri Lankan wildlife.
+           </p>
           </div>
         </div>
       </section>
@@ -65,10 +79,13 @@ export default function AboutUsPage() {
           <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
             <div>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Share knowledge about wildlife photography with others who are interested in improving their skills and abilities.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Create a platform for our members to share their creative and rare captures from around the world.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Enable our members to win the highest global recognition—an international photography competition—and to bring honor to Sri Lanka.
               </p>
             </div>
           </div>

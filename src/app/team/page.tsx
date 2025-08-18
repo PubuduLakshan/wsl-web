@@ -81,14 +81,11 @@ export default function TeamPage() {
           
           <div className="max-w-4xl">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Discover the passionate individuals behind Wild Sri Lanka. Our dedicated team of professionals 
-              works tirelessly to promote wildlife photography and conservation across Sri Lanka.
-            </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            The staff of "Wild Srilanka" comprises talented wildlife photographers and conservation enthusiasts in Sri Lanka. 
+            Our team includes both young and elder volunteers who contribute their time and expertise without any financial benefit. 
+            Our collective aim is to create a better country for the next generation, fostering peaceful coexistence with wildlife and nature. 
+            We strive to promote wildlife photography as a tool for conservation, raise awareness, and inspire the public about the magnificent fauna and flora of our country. 
+            Through these efforts, we hope to encourage sincere initiatives for the conservation of Sri Lankan wildlife.
             </p>
           </div>
         </div>
