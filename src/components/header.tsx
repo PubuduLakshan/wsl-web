@@ -52,12 +52,18 @@ export function Navbar() {
           WPOTY
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
-        <Link to="/projects" className={getLinkClasses('/projects')}>
+        <Link to="/events" className={getLinkClasses('/events')}>
           <span className="flex items-center">
-            PROJECTS
+            EVENTS
             {hasEventsToday && (
               <span className="ml-1 w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
             )}
+          </span>
+          <div className={getUnderlineClasses('/events')}></div>
+        </Link>
+        <Link to="/projects" className={getLinkClasses('/projects')}>
+          <span className="flex items-center">
+            PROJECTS
           </span>
           <div className={getUnderlineClasses('/projects')}></div>
         </Link>

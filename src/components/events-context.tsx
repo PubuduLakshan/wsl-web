@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-interface Event {
+interface EventItem {
   id: number
   title: string
   description: string
@@ -50,10 +50,10 @@ export function EventsProvider({ children }: { children: ReactNode }) {
 
   const checkEventsToday = async () => {
     try {
-      const response = await fetch('/projects.json')
+              const response = await fetch('/events.json')
       if (response.ok) {
         const data = await response.json()
-        const hasToday = data.events.some((event: Event) => isEventToday(event.dates))
+        const hasToday = data.events.some((event: EventItem) => isEventToday(event.dates))
         setHasEventsToday(hasToday)
       }
     } catch (error) {

@@ -1,180 +1,263 @@
 {
-  "events": [
+  "projects": [
     {
       "id": 1,
-      "title": "Wildlife Photography Workshop 2025",
-      "description": "Join our expert-led workshop to master wildlife photography techniques in the heart of Sri Lanka's national parks. Learn advanced camera settings, animal behavior prediction, and ethical photography practices.",
-      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2025-08-22", "2025-08-23", "2025-08-24"],
-      "location": "Yala National Park",
-      "category": "Workshop",
-      "spots": 15,
-      "price": "$299"
+      "title": "Wildlife Conservation Photography Project",
+      "description": "A comprehensive project documenting endangered species in Sri Lanka through photography, contributing to conservation efforts and raising awareness about biodiversity protection. This initiative focuses on capturing high-quality images of rare and threatened species to support research and conservation programs.",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+      "category": "Conservation",
+      "status": "Ongoing",
+      "startDate": "2024-01-15",
+      "endDate": "2024-12-31",
+      "location": "Various National Parks",
+      "team": ["Dr. Sarah Johnson", "Prof. Rajith Silva", "Maria Fernandez", "David Chen", "Priya Patel"],
+      "funding": "Rs.50,000",
+      "partners": ["Wildlife Conservation Society", "University of Colombo", "Department of Wildlife Conservation"],
+      "achievements": [
+        "Documented 15 endangered species",
+        "Published 3 research papers",
+        "Trained 20 local photographers",
+        "Established monitoring protocols",
+        "Created species database"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 2,
-      "title": "Conservation Photography Exhibition",
-      "description": "Experience the power of photography in conservation through our curated exhibition featuring award-winning wildlife images and conservation success stories from across Sri Lanka.",
-      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2025-08-18", "2025-08-19", "2025-08-21"],
-      "location": "Colombo Art Gallery",
-      "category": "Exhibition",
-      "spots": 50,
-      "price": "Free"
-    },
-    {
-      "id": 3,
-      "title": "Bird Photography Masterclass",
-      "description": "Specialized workshop focusing on avian photography techniques, bird identification, and capturing the perfect bird in flight shots in Sri Lanka's diverse ecosystems.",
-      "image": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2025-05-10", "2025-05-11"],
-      "location": "Sinharaja Forest Reserve",
-      "category": "Masterclass",
-      "spots": 10,
-      "price": "$399"
+      "title": "Marine Life Documentation Initiative",
+      "description": "Exploring and documenting the rich marine biodiversity around Sri Lanka's coastal waters, focusing on coral reefs, fish species, and marine mammals. This project uses advanced underwater photography techniques to capture the beauty and diversity of marine ecosystems.",
+      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
+      "category": "Marine Biology",
+      "status": "Completed",
+      "startDate": "2023-06-01",
+      "endDate": "2024-05-31",
+      "location": "Southern Coast",
+      "team": ["Dr. Michael Chen", "Dr. Priya Patel", "Alex Thompson", "Lisa Wang", "Kumar Perera"],
+      "funding": "$75,000",
+      "partners": ["Marine Biology Institute", "Ocean Conservation Trust", "Coastal Research Center"],
+      "achievements": [
+        "Identified 45 new species",
+        "Created marine biodiversity database",
+        "Established monitoring protocols",
+        "Published 2 scientific papers",
+        "Trained 15 marine photographers"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 4,
-      "title": "Wildlife Photography Competition 2024",
-      "description": "Our annual photography competition brought together over 200 photographers from around the world, showcasing the incredible biodiversity of Sri Lanka through stunning imagery.",
-      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-12-15", "2024-12-16", "2024-12-17"],
-      "location": "Online & Gallery",
-      "category": "Competition",
-      "participants": 200,
-      "winners": 3
+      "title": "Aerial Wildlife Survey Project",
+      "description": "Using drone technology to conduct comprehensive aerial surveys of wildlife populations and habitat mapping across protected areas in Sri Lanka. This innovative approach provides new perspectives on wildlife distribution and habitat health.",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "category": "Technology",
+      "status": "Planning",
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "location": "Protected Areas",
+      "team": ["Dr. James Wilson", "Tech Team", "Conservation Experts", "Drone Pilots", "Data Analysts"],
+      "funding": "$100,000",
+      "partners": ["Drone Technology Institute", "Wildlife Department", "Aerial Survey Company"],
+      "achievements": [
+        "Protocol development in progress",
+        "Equipment procurement planned",
+        "Team training scheduled",
+        "Survey areas identified",
+        "Data analysis framework designed"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 5,
-      "title": "Conservation Awareness Campaign",
-      "description": "A comprehensive campaign to raise awareness about endangered species in Sri Lanka, featuring photography exhibitions, school visits, and community engagement programs.",
+      "title": "Endangered Species Recovery Program",
+      "description": "Focused conservation project targeting specific endangered species in Sri Lanka, combining research, monitoring, and community engagement for species recovery. This program works closely with local communities and conservation experts.",
       "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-11-20", "2024-11-21", "2024-11-22"],
+      "category": "Conservation",
+      "status": "Ongoing",
+      "startDate": "2023-09-01",
+      "endDate": "2026-08-31",
       "location": "Multiple Locations",
-      "category": "Awareness",
-      "reach": 5000,
-      "schools": 25
+      "team": ["Dr. Emma Davis", "Dr. Sanjay Kumar", "Conservation Team", "Community Liaisons", "Research Assistants"],
+      "funding": "$200,000",
+      "partners": ["International Conservation Fund", "Local NGOs", "Wildlife Research Institute"],
+      "achievements": [
+        "Population monitoring established",
+        "Habitat restoration initiated",
+        "Community awareness programs",
+        "Breeding program started",
+        "Research partnerships formed"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 6,
-      "title": "Photography Equipment Workshop",
-      "description": "Hands-on workshop covering camera equipment, lens selection, and maintenance for wildlife photography, helping photographers optimize their gear for field work.",
-      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-10-05", "2024-10-06"],
-      "location": "Wild Sri Lanka Studio",
-      "category": "Workshop",
-      "participants": 30,
-      "duration": "2 days"
+      "title": "Photography Equipment Donation Initiative",
+      "description": "Providing photography equipment to schools and conservation organizations to support their documentation and educational efforts in wildlife photography. This initiative helps bridge the gap in access to quality photography equipment.",
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      "category": "Charity",
+      "status": "Completed",
+      "startDate": "2024-01-05",
+      "endDate": "2024-06-30",
+      "location": "Multiple Recipients",
+      "team": ["Equipment Committee", "Distribution Team", "Training Coordinators", "Quality Control"],
+      "funding": "$25,000",
+      "partners": ["Camera Manufacturers", "Educational Institutions", "Conservation Organizations"],
+      "achievements": [
+        "Donated 50 camera kits",
+        "Supported 15 organizations",
+        "Trained recipients on equipment",
+        "Established maintenance program",
+        "Created equipment sharing network"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 7,
-      "title": "Marine Life Photography Expedition",
-      "description": "Exclusive expedition to capture marine life around Sri Lanka's coastal waters, featuring whales, dolphins, and diverse marine ecosystems through underwater photography.",
-      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-09-15", "2024-09-16", "2024-09-17", "2024-09-18", "2024-09-19"],
-      "location": "Southern Coast",
-      "category": "Expedition",
-      "participants": 12,
-      "duration": "5 days"
+      "title": "Bird Photography Research Project",
+      "description": "Comprehensive study of avian species in Sri Lanka through photography, documenting bird behavior, migration patterns, and habitat preferences. This project contributes to ornithological research and conservation.",
+      "image": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80",
+      "category": "Research",
+      "status": "Ongoing",
+      "startDate": "2024-02-01",
+      "endDate": "2025-01-31",
+      "location": "Bird Sanctuaries & Forests",
+      "team": ["Dr. Robert Wilson", "Ornithologists", "Photography Experts", "Field Researchers"],
+      "funding": "$60,000",
+      "partners": ["Bird Conservation Society", "Ornithological Institute", "Forest Department"],
+      "achievements": [
+        "Documented 120 bird species",
+        "Created behavior database",
+        "Published migration maps",
+        "Trained 10 bird photographers",
+        "Established monitoring stations"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 8,
-      "title": "Student Photography Mentorship",
-      "description": "Educational program designed for young photographers, providing mentorship, equipment access, and field experience in wildlife photography and conservation.",
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-08-30", "2024-09-30", "2024-10-30"],
-      "location": "Various National Parks",
-      "category": "Education",
-      "students": 45,
-      "duration": "3 months"
+      "title": "Underwater Photography Expedition",
+      "description": "Exploring the underwater world around Sri Lanka's coral reefs and marine ecosystems through advanced underwater photography techniques. This project captures the beauty and diversity of marine life.",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
+      "category": "Marine Biology",
+      "status": "Completed",
+      "startDate": "2023-08-01",
+      "endDate": "2024-07-31",
+      "location": "Coral Reefs & Marine Parks",
+      "team": ["Marine Biologists", "Underwater Photographers", "Diving Experts", "Research Team"],
+      "funding": "$80,000",
+      "partners": ["Marine Research Institute", "Diving Centers", "Coral Conservation Society"],
+      "achievements": [
+        "Documented 200+ marine species",
+        "Created coral reef atlas",
+        "Trained underwater photographers",
+        "Published marine guidebook",
+        "Established monitoring program"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 9,
-      "title": "Documentary Photography Project",
-      "description": "Comprehensive documentation of Sri Lanka's wildlife conservation efforts, creating visual stories that highlight the challenges and successes in protecting biodiversity.",
-      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-07-20", "2024-08-20", "2024-09-20", "2024-10-20", "2024-11-20", "2024-12-20"],
-      "location": "Countrywide",
-      "category": "Documentary",
-      "duration": "6 months",
-      "publications": 5
+      "title": "Night Photography Conservation Project",
+      "description": "Documenting nocturnal wildlife and their behaviors through specialized night photography techniques. This project reveals the hidden world of creatures that are active after dark.",
+      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+      "category": "Conservation",
+      "status": "Ongoing",
+      "startDate": "2024-04-01",
+      "endDate": "2025-03-31",
+      "location": "National Parks & Forests",
+      "team": ["Night Photography Experts", "Wildlife Biologists", "Conservationists", "Field Guides"],
+      "funding": "$45,000",
+      "partners": ["Wildlife Conservation Trust", "Night Photography Society", "Forest Department"],
+      "achievements": [
+        "Documented 30 nocturnal species",
+        "Created night behavior guide",
+        "Trained night photographers",
+        "Established night monitoring",
+        "Published nocturnal atlas"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80"
+      ]
     },
     {
       "id": 10,
-      "title": "Camera Trap Installation Project",
-      "description": "Scientific project installing camera traps across protected areas to monitor wildlife populations and gather data for conservation research and management.",
-      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-06-10", "2024-06-11", "2024-06-12"],
-      "location": "Protected Areas",
-      "category": "Research",
-      "traps": 50,
-      "species": 15
-    },
-    {
-      "id": 11,
-      "title": "Photography Ethics Workshop",
-      "description": "Educational workshop focusing on ethical wildlife photography practices, ensuring minimal disturbance to animals while capturing compelling images.",
-      "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-05-25"],
-      "location": "Online",
-      "category": "Education",
-      "participants": 75,
-      "duration": "1 day"
-    },
-    {
-      "id": 12,
-      "title": "Wildlife Rehabilitation Photography",
-      "description": "Documentation project capturing the rehabilitation process of injured wildlife, raising awareness about wildlife rescue and rehabilitation efforts in Sri Lanka.",
-      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-04-15", "2024-05-15", "2024-06-15", "2024-07-15"],
-      "location": "Wildlife Centers",
-      "category": "Documentation",
-      "animals": 25,
-      "duration": "4 months"
-    },
-    {
-      "id": 13,
-      "title": "Community Photography Training",
-      "description": "Empowering local communities through photography training, enabling them to document their natural resources and contribute to conservation efforts.",
-      "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-03-20", "2024-03-21", "2024-03-22"],
-      "location": "Rural Communities",
-      "category": "Community",
-      "participants": 60,
-      "villages": 8
-    },
-    {
-      "id": 14,
-      "title": "Aerial Photography Project",
-      "description": "Innovative project using drone photography to capture unique perspectives of Sri Lanka's landscapes and wildlife from above.",
-      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-02-28", "2024-02-29", "2024-03-01"],
-      "location": "Various Locations",
-      "category": "Innovation",
-      "flights": 40,
-      "coverage": "5000 km²"
-    },
-    {
-      "id": 15,
-      "title": "Night Photography Workshop",
-      "description": "Specialized workshop teaching night photography techniques for capturing nocturnal wildlife and creating stunning low-light wildlife images.",
-      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-01-15", "2024-01-16", "2024-01-17"],
-      "location": "Wilpattu National Park",
-      "category": "Workshop",
-      "participants": 20,
-      "duration": "3 days"
-    },
-    {
-      "id": 16,
-      "title": "Photography Equipment Donation",
-      "description": "Charity project donating photography equipment to schools and conservation organizations to support their documentation and educational efforts.",
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
-      "dates": ["2024-01-05"],
-      "location": "Multiple Recipients",
-      "category": "Charity",
-      "equipment": 50,
-      "recipients": 15
+      "title": "Documentary Photography Series",
+      "description": "Creating comprehensive visual stories about conservation challenges and successes in Sri Lanka. This project produces documentary-style photography that tells compelling stories about wildlife and conservation efforts.",
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
+      "category": "Documentary",
+      "status": "Ongoing",
+      "startDate": "2024-01-01",
+      "endDate": "2025-12-31",
+      "location": "Countrywide",
+      "team": ["Documentary Photographers", "Storytellers", "Conservation Experts", "Local Guides"],
+      "funding": "$120,000",
+      "partners": ["Documentary Film Institute", "Conservation Media", "Local Communities"],
+      "achievements": [
+        "Produced 5 documentary series",
+        "Featured in international media",
+        "Won photography awards",
+        "Created educational content",
+        "Raised conservation awareness"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80"
+      ]
     }
   ]
-} 
+}

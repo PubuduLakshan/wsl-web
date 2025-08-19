@@ -171,7 +171,7 @@ export default function HomePage() {
             primaryButton: "ENTER THE COMPETITION",
             primaryButtonHref: "/wpoty",
             secondaryButton: "VIEW GALLERY",
-            secondaryButtonHref: "/projects"
+            secondaryButtonHref: "/events"
           },
           {
             id: 2,
@@ -193,7 +193,7 @@ export default function HomePage() {
             primaryButton: null,
             primaryButtonHref: "/contact",
             secondaryButton: null,
-            secondaryButtonHref: "/projects"
+            secondaryButtonHref: "/events"
           }
         ])
       } finally {
