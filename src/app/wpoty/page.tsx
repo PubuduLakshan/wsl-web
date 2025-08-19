@@ -9,75 +9,64 @@ interface Winner {
   name: string;
   category: string;
   image: string;
-  competitionCategory: 'Open' | 'School';
+  competitionCategory: 'Open' | 'Junior';
 }
 
-const winnersByYearAndCategory: Record<number, Record<'Open' | 'School', Winner[]>> = {
-  2025: {
-    Open: [
-      { name: 'Alex Thompson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Maria Rodriguez', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'David Chen', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Emma Wilson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Liam Davis', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Sophia Brown', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
+const winnersByYearAndCategory: Record<number, Record<'Open' | 'Junior', Winner[]>> = {
+  
   2024: {
     Open: [
-      { name: 'Sarah Johnson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'James Wilson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Emma Davis', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
+      { name: 'Chitral Rajiv Jayatilake', category: 'Winner - Lunging for Life', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-1.png', competitionCategory: 'Open' },
+      { name: 'Sujeewa Nishantha Mallawaarachchi', category: '1st runners-Up - Feeding Time ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-2.png', competitionCategory: 'Open' },
+      { name: 'Samith Chandula Perera', category: '2nd runners-Up -  Under the Wings of Danger', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-3.png', competitionCategory: 'Open' },
     ],
-    School: [
-      { name: 'Noah Miller', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Olivia Garcia', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'William Taylor', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-  2023: {
-    Open: [
-      { name: 'Michael Brown', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Lisa Wang', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Robert Kim', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Ava Martinez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Ethan Anderson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Isabella Thomas', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
+    Junior: [
+      { name: 'Danuja Santhusa Palihawadana Arachchi', category: 'Winner - Had Enough', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-1.png', competitionCategory: 'Junior' },
+      { name: 'Sesadi Wickramasinghe', category: '1st runners-Up - A Deadly Delicacy', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-2.png', competitionCategory: 'Junior' },
+      { name: 'Sesadi Wickramasinghe', category: '2nd runners-Up - Avian Elegance', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-3.png', competitionCategory: 'Junior' },
     ]
   },
   2022: {
     Open: [
-      { name: 'Daniel Lee', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Sophia Chen', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Ryan Park', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
+      { name: 'Sudith Rodrigo', category: 'Winner  - Ravenous Beauty ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-1.png', competitionCategory: 'Open' },
+      { name: 'Ravisara Jayamanna', category: '1st runners-Up -  Expressed But Untold Love', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-2.png', competitionCategory: 'Open' },
+      { name: 'H.L. Prasantha Vinod', category: '2st runners-Up - Speed', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-3.png', competitionCategory: 'Open' },
     ],
-    School: [
-      { name: 'Mia Rodriguez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Lucas Johnson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Zoe Williams', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
+    Junior: [
+      { name: 'Ava Martinez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Ethan Anderson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Isabella Thomas', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
     ]
   },
-  2021: {
+  2019: {
     Open: [
-      { name: 'Christopher Wong', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Amanda Foster', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Kevin Zhang', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
+      { name: 'Gimantha Perera', category: 'Winner  - Hunter Hunted', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-1.png', competitionCategory: 'Open' },
+      { name: 'Wasiri Gajaman', category: '1st runners-Up - Aerial Inspection', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-2.png', competitionCategory: 'Open' },
+      { name: 'Viraj Kothalawala', category: '2st runners-Up - CUrban Traveller', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-3.png', competitionCategory: 'Open' },
     ],
-    School: [
-      { name: 'Chloe Davis', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Nathan Brown', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Ella Wilson', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
+    Junior: [
+      { name: 'Mia Rodriguez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Lucas Johnson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Zoe Williams', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+    ]
+  },
+  2018: {
+    Open: [
+      { name: 'Sujeeva Mallawaarachchi', category: 'Winner ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-1.png', competitionCategory: 'Open' },
+      { name: 'Gimantha Perera', category: '1st runners-Up ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-2.png', competitionCategory: 'Open' },
+      { name: 'Ravisara Jayamanna', category: '2st runners-Up ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-1.png', competitionCategory: 'Open' },
+    ],
+    Junior: [
+      { name: 'Chloe Davis', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Nathan Brown', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
+      { name: 'Ella Wilson', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
     ]
   },
 }
 
 export default function WPOYPage() {
   const [selectedYear, setSelectedYear] = useState(2025)
-  const [selectedCategory, setSelectedCategory] = useState<'Open' | 'School'>('Open')
+  const [selectedCategory, setSelectedCategory] = useState<'Open' | 'Junior'>('Open')
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
@@ -458,7 +447,7 @@ export default function WPOYPage() {
                     <div className="flex relative">
                       <div 
                         className={`absolute top-2 bottom-2 w-1/2 rounded-2xl transition-all duration-500 ease-out bg-primary ${
-                          selectedCategory === 'School' ? 'translate-x-full' : 'translate-x-0'
+                          selectedCategory === 'Junior' ? 'translate-x-full' : 'translate-x-0'
                         }`}
                       ></div>
                       <button
@@ -475,9 +464,9 @@ export default function WPOYPage() {
                         <span className="font-medium">Open</span>
                       </button>
                       <button
-                        onClick={() => setSelectedCategory('School')}
+                        onClick={() => setSelectedCategory('Junior')}
                         className={`flex-1 py-4 px-6 rounded-2xl font-semibold transition-all duration-500 flex items-center justify-center space-x-3 relative z-10 ${
-                          selectedCategory === 'School'
+                          selectedCategory === 'Junior'
                             ? 'text-white'
                             : 'text-gray-600 hover:text-primary'
                         }`}
@@ -486,7 +475,7 @@ export default function WPOYPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         </svg>
-                        <span className="font-medium">School</span>
+                        <span className="font-medium">Junior</span>
                       </button>
                     </div>
                   </div>
