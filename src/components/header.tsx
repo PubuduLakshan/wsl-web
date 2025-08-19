@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useEvents } from './events-context'
+import { useWPOY } from './wpoty-context'
 
 export function Navbar() {
   const location = useLocation()
   const pathname = location.pathname
   const { hasEventsToday } = useEvents()
+  const { isWPOYAnnounced, isSubmissionClosed } = useWPOY()
 
   const isActive = (path: string) => {
     if (path === '/') {
@@ -49,7 +51,14 @@ export function Navbar() {
           <div className={getUnderlineClasses('/')}></div>
         </Link>
         <Link to="/wpoty" className={getLinkClasses('/wpoty')}>
-          WPOTY
+          <span className="flex items-center">
+            WPOTY
+            {isWPOYAnnounced && (
+              <span className={`ml-1 w-2 h-2 rounded-full animate-pulse ${
+                isSubmissionClosed ? 'bg-red-500' : 'bg-green-500'
+              }`}></span>
+            )}
+          </span>
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
         <Link to="/events" className={getLinkClasses('/events')}>

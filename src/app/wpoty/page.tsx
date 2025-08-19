@@ -12,13 +12,22 @@ interface Winner {
   competitionCategory: 'Open' | 'Junior';
 }
 
-
+interface WPOYConfig {
+  isAnnounced: boolean;
+  currentYear: number;
+  googleSheetLink: string;
+  announcementDate: string;
+  submissionDeadline: string;
+  resultsDate: string;
+}
 
 export default function WPOYPage() {
   const [selectedYear, setSelectedYear] = useState(2024)
   const [selectedCategory, setSelectedCategory] = useState<'Open' | 'Junior'>('Open')
   const [winnersByYearAndCategory, setWinnersByYearAndCategory] = useState<Record<number, Record<'Open' | 'Junior', Winner[]>>>({})
   const [winnersLoading, setWinnersLoading] = useState(true)
+  const [wpotyConfig, setWpotyConfig] = useState<WPOYConfig | null>(null)
+  const [configLoading, setConfigLoading] = useState(true)
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
@@ -55,7 +64,31 @@ export default function WPOYPage() {
       }
     }
 
+    const loadWPOYConfig = async () => {
+      try {
+        const response = await fetch('/wpoty-config.json')
+        if (response.ok) {
+          const data = await response.json()
+          setWpotyConfig(data)
+        }
+      } catch (error) {
+        console.error('Error loading WPOY config:', error)
+        // Fallback config if JSON loading fails
+        setWpotyConfig({
+          isAnnounced: false,
+          currentYear: 2025,
+          googleSheetLink: '',
+          announcementDate: '',
+          submissionDeadline: '',
+          resultsDate: ''
+        })
+      } finally {
+        setConfigLoading(false)
+      }
+    }
+
     loadWinnersData()
+    loadWPOYConfig()
   }, [])
 
   // Auto-switch to available category when current category has no data
@@ -345,6 +378,146 @@ export default function WPOYPage() {
           </div>
         </div>
       </section>
+
+      {/* Competition Entry Section */}
+      {!configLoading && (
+        <section className="py-20" style={{ backgroundColor: 'rgb(34, 34, 34)' }}>
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">COMPETITION {wpotyConfig?.currentYear}</h2>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            {wpotyConfig?.isAnnounced ? (
+              /* Competition is announced - Show entry form */
+              <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-3xl p-8 md:p-12 border border-primary/20">
+                <div className="text-center mb-8">
+                  {(() => {
+                    const today = new Date()
+                    const deadline = new Date(wpotyConfig.submissionDeadline)
+                    const isDeadlinePassed = today > deadline
+                    
+                    return isDeadlinePassed ? (
+                      <div className="inline-flex items-center space-x-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span>Submissions Closed</span>
+                      </div>
+                    ) : (
+                      <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Competition Now Open!</span>
+                      </div>
+                    )
+                  })()}
+                  <h3 className="text-2xl font-bold text-white mb-2">Wildlife Photographer of the Year {wpotyConfig.currentYear}</h3>
+                  <p className="text-gray-300 mb-6">Submit your best wildlife photographs and compete with photographers worldwide</p>
+                  
+                  {/* Competition Details */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                                             <h4 className="font-semibold text-gray-800 mb-2">Announcement Date</h4>
+                       <p className="text-gray-700">{wpotyConfig.announcementDate}</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                                             <h4 className="font-semibold text-gray-800 mb-2">Submission Deadline</h4>
+                       <p className="text-gray-700">{wpotyConfig.submissionDeadline}</p>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                      </div>
+                                             <h4 className="font-semibold text-gray-800 mb-2">Results Date</h4>
+                       <p className="text-gray-700">{wpotyConfig.resultsDate}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Entry Button */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    {(() => {
+                      const today = new Date()
+                      const deadline = new Date(wpotyConfig.submissionDeadline)
+                      const isDeadlinePassed = today > deadline
+                      
+                      return isDeadlinePassed ? (
+                        /* Deadline passed - Show disabled button */
+                        <div className="group relative px-8 py-4 text-gray-400 font-semibold rounded-xl transition-all duration-300 shadow-2xl cursor-not-allowed"
+                          style={{ backgroundColor: '#f3f4f6' }}
+                        >
+                          <span className="relative z-10 flex items-center justify-center">
+                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            SUBMISSIONS CLOSED
+                          </span>
+                        </div>
+                      ) : (
+                        /* Deadline not passed - Show active button */
+                        <a 
+                          href={wpotyConfig.googleSheetLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                          style={{ backgroundColor: '#F0A641' }}
+                        >
+                          <span className="relative z-10 flex items-center justify-center">
+                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            ENTER COMPETITION
+                          </span>
+                          <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
+                        </a>
+                      )
+                    })()}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              /* Competition not announced - Show coming soon */
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                <div className="text-center">
+                  <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Coming Soon</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-2">Competition {wpotyConfig?.currentYear} Announcement</h3>
+                  <p className="text-black mb-6">The Wildlife Photographer of the Year {wpotyConfig?.currentYear} competition will be announced soon. Stay tuned for updates!</p>
+                  
+                  <div className="bg-white rounded-xl p-6 shadow-lg max-w-md mx-auto">
+                    <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM4 19h6v-2H4v2zM4 15h6v-2H4v2zM4 11h6V9H4v2zM4 7h6V5H4v2zM4 3h6V1H4v2z" />
+                      </svg>
+                    </div>
+                                         <h4 className="font-semibold text-gray-800 mb-2">Get Notified</h4>
+                     <p className="text-gray-700 text-sm">We'll notify you when the competition opens for submissions</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Previous Winners Section */}
       <section id="winners" className="py-20" style={{ backgroundColor: '#f8f6f2' }}>
