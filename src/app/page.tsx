@@ -1,10 +1,8 @@
-"use client"
-
 import React, { useState, useEffect } from 'react'
 import { Navbar } from '../components/header'
 import { ContactSection } from '../components/contact-section'
 import { Footer } from '../components/footer'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../components/theme-provider'
 
 interface NewsItem {
@@ -371,9 +369,9 @@ export default function HomePage() {
                 Wild Sri Lanka is a platform dedicated to showcasing the incredible biodiversity of Sri Lanka through the art of photography. Our mission is to inspire conservation through visual storytelling and connect photographers with the natural wonders of this beautiful island.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                From the majestic elephants of Minneriya to the elusive leopards of Yala, from the vibrant coral reefs to the misty mountains, Sri Lanka offers photographers an unparalleled opportunity to capture nature at its finest.
+              In November 2015, a passionate group of photographers, driven by their love for nature and wildlife, laid the foundation for "Wild Sri Lanka." Our community, initially formed on social media, was conceived with a noble vision: to contribute to the conservation of Sri Lankan wildlife and elevate the standard of wildlife photography to an international level.
               </p>
-              <Link href="/about-us" className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg inline-block" style={{ backgroundColor: '#F0A641' }}>
+              <Link to="/about-us" className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg inline-block" style={{ backgroundColor: '#F0A641' }}>
                 <span className="relative z-10">Learn More</span>
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
               </Link>
@@ -743,7 +741,7 @@ export default function HomePage() {
                             </div>
                           </div>
                           
-                          <Link href={`/news/${news.id}`} className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300">
+                          <Link to={`/news/${news.id}`} className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300">
                             <span>Read More</span>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

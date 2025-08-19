@@ -1,7 +1,5 @@
-"use client"
-
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { Navbar } from '../../components/header'
 import { ContactSection } from '../../components/contact-section'
 import { Footer } from '../../components/footer'
@@ -154,7 +152,7 @@ export default function NewsPage() {
                   
                   {/* Read More Button */}
                   <div className="mt-6">
-                    <Link href={`/news/${news.id}`} className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300">
+                    <Link to={`/news/${news.id}`} className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300">
                       <span>Read More</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

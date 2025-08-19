@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { Navbar } from '../../../components/header'
 import { ContactSection } from '../../../components/contact-section'
 import { Footer } from '../../../components/footer'
@@ -72,7 +72,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-gray-600 mb-6">The article you're looking for doesn't exist.</p>
-            <Link href="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+            <Link to="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
               Back to News
             </Link>
           </div>
@@ -109,7 +109,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
         <div className="max-w-4xl mx-auto px-4">
           {/* Breadcrumb */}
           <div className="mb-8">
-            <Link href="/news" className="text-primary hover:text-primary-dark transition-colors">
+            <Link to="/news" className="text-primary hover:text-primary-dark transition-colors">
               ← Back to News
             </Link>
           </div>
@@ -187,7 +187,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
                 </div>
               </div>
               
-              <Link href="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+              <Link to="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
                 Back to News
               </Link>
             </div>

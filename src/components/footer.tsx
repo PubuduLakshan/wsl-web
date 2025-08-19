@@ -1,7 +1,5 @@
-"use client"
-
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
   return (
@@ -49,32 +47,32 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/" className="text-gray-400 hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/wpoty" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/wpoty" className="text-gray-400 hover:text-primary transition-colors">
                   WPOTY
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/projects" className="text-gray-400 hover:text-primary transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/news" className="text-gray-400 hover:text-primary transition-colors">
                   News
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/team" className="text-gray-400 hover:text-primary transition-colors">
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="text-gray-400 hover:text-primary transition-colors">
+                <Link to="/about-us" className="text-gray-400 hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
