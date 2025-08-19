@@ -443,7 +443,7 @@ export default function HomePage() {
               <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
             </button>
             <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
-              <span className="relative z-10">PREVIOUS WINNERS</span>
+              <span className="relative z-10">WINNERS</span>
             </button>
           </div>
           
@@ -540,7 +540,7 @@ export default function HomePage() {
       <section id="winners" className="py-20" style={{ backgroundColor: '#f8f6f2' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-4xl font-bold text-black mb-4">PREVIOUS WINNERS</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">WINNERS</h2>
             <div className="w-24 h-1 bg-primary"></div>
           </div>
           

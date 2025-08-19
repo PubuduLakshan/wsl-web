@@ -350,7 +350,7 @@ export default function WPOYPage() {
       <section id="winners" className="py-20" style={{ backgroundColor: '#f8f6f2' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-4xl font-bold text-black mb-4">PREVIOUS WINNERS</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">WINNERS</h2>
             <div className="w-24 h-1 bg-primary"></div>
           </div>
           

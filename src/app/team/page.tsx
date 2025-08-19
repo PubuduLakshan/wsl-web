@@ -1,11 +1,13 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Navbar } from '../../components/header'
 import { ContactSection } from '../../components/contact-section'
 import { Footer } from '../../components/footer'
 
 interface TeamMember {
+  id: string
   name: string
   position?: string
   email: string
@@ -35,14 +37,14 @@ export default function TeamPage() {
         // Fallback data in case of error
         setTeamData({
           boardOfficials: [
-            { name: 'Niro Genzarry', position: 'President', email: 'nina.genzarry@team.collection', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80' },
-            { name: 'Clara Huel', position: 'Vice President', email: 'clara.huel@team.collection', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80' },
-            { name: 'Max Collins', position: 'Secretary', email: 'm.collins@team.collection', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80' }
+            { id: 'niro-genzarry-president', name: 'Niro Genzarry', position: 'President', email: 'nina.genzarry@team.collection', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80' },
+            { id: 'clara-huel-vice-president', name: 'Clara Huel', position: 'Vice President', email: 'clara.huel@team.collection', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80' },
+            { id: 'max-collins-secretary', name: 'Max Collins', position: 'Secretary', email: 'm.collins@team.collection', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80' }
           ],
           moderaTeam: [
-            { name: 'Niro Genzarry', email: 'nina.genzarry@team.collection', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80' },
-            { name: 'Clara Huel', email: 'clara.huel@team.collection', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80' },
-            { name: 'Max Collins', email: 'm.collins@team.collection', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80' }
+            { id: 'niro-genzarry-moderator-1', name: 'Niro Genzarry', email: 'nina.genzarry@team.collection', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80' },
+            { id: 'clara-huel-moderator-1', name: 'Clara Huel', email: 'clara.huel@team.collection', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80' },
+            { id: 'max-collins-moderator-1', name: 'Max Collins', email: 'm.collins@team.collection', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80' }
           ]
         })
       } finally {
@@ -134,11 +136,14 @@ export default function TeamPage() {
                     <span className="truncate">{member.email}</span>
                   </div>
                   
-                  {/* Hover Contact Button */}
+                  {/* Hover Profile Button */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200">
-                      Contact
-                    </button>
+                    <Link 
+                      to={`/team/${member.id}`}
+                      className="block w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200 text-center"
+                    >
+                      Profile
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -188,11 +193,14 @@ export default function TeamPage() {
                     <span className="truncate">{member.email}</span>
                   </div>
                   
-                  {/* Hover Contact Button */}
+                  {/* Hover Profile Button */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200">
-                      Contact
-                    </button>
+                    <Link 
+                      to={`/team/${member.id}`}
+                      className="block w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200 text-center"
+                    >
+                      Profile
+                    </Link>
                   </div>
                 </div>
               </div>

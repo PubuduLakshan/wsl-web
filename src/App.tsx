@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './app/page'
 import AboutUsPage from './app/about-us/page'
 import TeamPage from './app/team/page'
+import TeamMemberProfile from './app/team/[id]/page'
 import NewsPage from './app/news/page'
 import NewsDetailWrapper from './components/NewsDetailWrapper'
 import WpotyPage from './app/wpoty/page'
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/team/:id" element={<TeamMemberProfile />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/news/:id" element={<NewsDetailWrapper />} />
         <Route path="/wpoty" element={<WpotyPage />} />
