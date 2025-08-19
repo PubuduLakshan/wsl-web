@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useEvents } from './events-context'
 
 export function Navbar() {
   const location = useLocation()
   const pathname = location.pathname
+  const { hasEventsToday } = useEvents()
 
   const isActive = (path: string) => {
     if (path === '/') {
@@ -51,7 +53,12 @@ export function Navbar() {
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
         <Link to="/projects" className={getLinkClasses('/projects')}>
-          PROJECTS
+          <span className="flex items-center">
+            PROJECTS
+            {hasEventsToday && (
+              <span className="ml-1 w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            )}
+          </span>
           <div className={getUnderlineClasses('/projects')}></div>
         </Link>
         <Link to="/news" className={getLinkClasses('/news')}>

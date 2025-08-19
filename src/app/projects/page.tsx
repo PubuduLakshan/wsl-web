@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react'
 import { Navbar } from '@/components/header'
 import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
+import { useEvents } from '@/components/events-context'
 
 interface Project {
   id: number
   title: string
   description: string
   image: string
-  date: string
+  dates: string[]
+  date?: string // For backward compatibility
   location: string
   category: string
   spots?: number
@@ -33,8 +35,7 @@ interface Project {
 }
 
 interface ProjectsData {
-  upcomingEvents: Project[]
-  pastEvents: Project[]
+  events: Project[]
 }
 
 export default function ProjectsPage() {
@@ -43,6 +44,73 @@ export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<'upcoming' | 'past'>('upcoming')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [showModal, setShowModal] = useState(false)
+  const { hasEventsToday } = useEvents()
+
+  // Function to check if event is happening today
+  const isEventToday = (event: Project) => {
+    const today = new Date()
+    const eventDates = event.dates || (event.date ? [event.date] : [])
+    
+    const isToday = eventDates.some(eventDate => {
+      const event = new Date(eventDate)
+      return today.getFullYear() === event.getFullYear() &&
+             today.getMonth() === event.getMonth() &&
+             today.getDate() === event.getDate()
+    })
+    
+    // Debug logging
+    console.log(`Event dates: ${eventDates.join(', ')}, Today: ${today.toISOString().split('T')[0]}, Is today: ${isToday}`)
+    
+    return isToday
+  }
+
+  // Function to categorize events based on date
+  const categorizeEvents = (events: Project[]) => {
+    const now = new Date()
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    
+    const upcoming: Project[] = []
+    const past: Project[] = []
+    
+    events.forEach(event => {
+      // Handle both old 'date' and new 'dates' format for backward compatibility
+      const eventDates = event.dates || (event.date ? [event.date] : [])
+      
+      if (eventDates.length === 0) {
+        // If no dates, treat as past event
+        past.push(event)
+        return
+      }
+      
+      // Check if any date in the array is today or in the future
+      const hasUpcomingDate = eventDates.some(date => new Date(date) >= today)
+      if (hasUpcomingDate) {
+        upcoming.push(event)
+      } else {
+        past.push(event)
+      }
+    })
+    
+    // Sort upcoming events by earliest date
+    upcoming.sort((a, b) => {
+      const aDates = a.dates || (a.date ? [a.date] : [])
+      const bDates = b.dates || (b.date ? [b.date] : [])
+      const aEarliest = Math.min(...aDates.map(date => new Date(date).getTime()))
+      const bEarliest = Math.min(...bDates.map(date => new Date(date).getTime()))
+      return aEarliest - bEarliest
+    })
+    
+    // Sort past events by most recent date
+    past.sort((a, b) => {
+      const aDates = a.dates || (a.date ? [a.date] : [])
+      const bDates = b.dates || (b.date ? [b.date] : [])
+      const aLatest = Math.max(...aDates.map(date => new Date(date).getTime()))
+      const bLatest = Math.max(...bDates.map(date => new Date(date).getTime()))
+      return bLatest - aLatest
+    })
+    
+    return { upcoming, past }
+  }
 
   useEffect(() => {
     const loadProjectsData = async () => {
@@ -57,8 +125,7 @@ export default function ProjectsPage() {
         console.error('Error loading projects data:', error)
         // Fallback data
         setProjectsData({
-          upcomingEvents: [],
-          pastEvents: []
+          events: []
         })
       } finally {
         setLoading(false)
@@ -94,9 +161,9 @@ export default function ProjectsPage() {
     )
   }
 
-  const currentProjects = activeFilter === 'upcoming' 
-    ? projectsData?.upcomingEvents || []
-    : projectsData?.pastEvents || []
+  const { upcoming, past } = projectsData ? categorizeEvents(projectsData.events) : { upcoming: [], past: [] }
+  
+  const currentProjects = activeFilter === 'upcoming' ? upcoming : past
 
   return (
     <>
@@ -129,7 +196,15 @@ export default function ProjectsPage() {
                 backgroundColor: activeFilter === 'upcoming' ? '#F0A641' : 'white' 
               }}
             >
-              <span className="relative z-10">Upcoming Events ({projectsData?.upcomingEvents.length || 0})</span>
+              <span className="relative z-10 flex items-center">
+                Upcoming Events ({upcoming.length})
+                {hasEventsToday && (
+                  <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full bg-red-500 text-white text-xs font-bold animate-pulse">
+                    <span className="w-1.5 h-1.5 bg-white rounded-full mr-1 animate-ping"></span>
+                    TODAY
+                  </span>
+                )}
+              </span>
               {activeFilter === 'upcoming' && (
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
               )}
@@ -145,7 +220,7 @@ export default function ProjectsPage() {
                 backgroundColor: activeFilter === 'past' ? '#F0A641' : 'white' 
               }}
             >
-              <span className="relative z-10">Past Events ({projectsData?.pastEvents.length || 0})</span>
+              <span className="relative z-10">Past Events ({past.length})</span>
               {activeFilter === 'past' && (
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
               )}
@@ -158,8 +233,17 @@ export default function ProjectsPage() {
       <section className="pt-8 pb-20" style={{ backgroundColor: '#f8f6f2' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentProjects.map((project) => (
-              <div key={project.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden flex flex-col h-full">
+            {currentProjects.map((project) => {
+              const isToday = isEventToday(project)
+              return (
+                <div 
+                  key={project.id} 
+                  className={`group rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full ${
+                    isToday 
+                      ? 'bg-gradient-to-br from-yellow-100 to-yellow-50 border-2 border-yellow-400 shadow-yellow-200' 
+                      : 'bg-white border border-gray-100'
+                  }`}
+                >
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -175,13 +259,27 @@ export default function ProjectsPage() {
                     </div>
                   </div>
 
+                  {/* Today Banner */}
+                  {isToday && (
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500 text-white text-sm font-bold shadow-lg animate-pulse">
+                        <span className="w-2 h-2 bg-white rounded-full mr-2 animate-ping"></span>
+                        HAPPENING TODAY
+                      </div>
+                    </div>
+                  )}
+
                   {/* Date Badge */}
                   <div className="absolute top-4 right-4">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/80 backdrop-blur-sm text-white text-sm font-semibold shadow-lg">
+                    <div className={`inline-flex items-center px-3 py-1 rounded-full backdrop-blur-sm text-sm font-semibold shadow-lg ${
+                      isToday 
+                        ? 'bg-yellow-400 text-black font-bold' 
+                        : 'bg-black/80 text-white'
+                    }`}>
                       <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                       </svg>
-                      {formatDate(project.date)}
+                      {isToday ? 'TODAY' : formatDate((project.dates || (project.date ? [project.date] : []))[0] || '')}
                     </div>
                   </div>
                 </div>
@@ -257,7 +355,8 @@ export default function ProjectsPage() {
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
 
           {/* Empty State */}
@@ -326,7 +425,12 @@ export default function ProjectsPage() {
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                   </svg>
-                  {formatDate(selectedProject.date)}
+                  {(() => {
+                    const dates = selectedProject.dates || (selectedProject.date ? [selectedProject.date] : [])
+                    return dates.length > 1 
+                      ? `${formatDate(dates[0])} - ${formatDate(dates[dates.length - 1])}`
+                      : formatDate(dates[0] || '')
+                  })()}
                 </div>
               </div>
 
