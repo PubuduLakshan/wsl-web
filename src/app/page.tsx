@@ -42,111 +42,30 @@ interface Winner {
   name: string;
   category: string;
   image: string;
-  competitionCategory: 'Open' | 'School';
+  competitionCategory: 'Open' | 'Junior';
 }
 
-const winnersByYearAndCategory: Record<number, Record<'Open' | 'School', Winner[]>> = {
-  2025: {
-    Open: [
-      { name: 'Alex Thompson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Maria Rodriguez', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'David Chen', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Emma Wilson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Liam Davis', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Sophia Brown', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-  2024: {
-    Open: [
-      { name: 'Sarah Johnson', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'James Wilson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Emma Davis', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Noah Miller', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Olivia Garcia', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'William Taylor', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-  2023: {
-    Open: [
-      { name: 'Michael Brown', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Lisa Wang', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Robert Kim', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Ava Martinez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Ethan Anderson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Isabella Thomas', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-  2022: {
-    Open: [
-      { name: 'Daniel Lee', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Sophia Chen', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Ryan Park', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Mia Rodriguez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Lucas Johnson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Zoe Williams', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-  2021: {
-    Open: [
-      { name: 'Christopher Wong', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Amanda Foster', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-      { name: 'Kevin Zhang', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Open' },
-    ],
-    School: [
-      { name: 'Chloe Davis', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Nathan Brown', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-      { name: 'Ella Wilson', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'School' },
-    ]
-  },
-}
+
 
 export default function HomePage() {
-  const [selectedYear, setSelectedYear] = useState(2025)
-  const [selectedCategory, setSelectedCategory] = useState<'Open' | 'School'>('Open')
+  const [selectedYear, setSelectedYear] = useState(2024)
+  const [selectedCategory, setSelectedCategory] = useState<'Open' | 'Junior'>('Open')
   const [newsData, setNewsData] = useState<NewsItem[]>([])
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0)
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0)
+  const [winnersByYearAndCategory, setWinnersByYearAndCategory] = useState<Record<number, Record<'Open' | 'Junior', Winner[]>>>({})
+  const [winnersLoading, setWinnersLoading] = useState(true)
   
-  // Hero slides data
-  const heroSlides = [
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=80",
-      badge: "Wildlife Photography Competition",
-      title: "WILD SRI LANKA\nPHOTOGRAPHER OF THE YEAR 2025",
-      description: "Capture the untamed beauty of Sri Lanka's wildlife and compete with photographers worldwide in our prestigious annual competition.",
-      primaryButton: "ENTER THE COMPETITION",
-      secondaryButton: "VIEW GALLERY"
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=2000&q=80",
-      badge: "Conservation Through Art",
-      title: "PRESERVE NATURE\nTHROUGH PHOTOGRAPHY",
-      description: "Join our mission to document and protect Sri Lanka's biodiversity through the powerful medium of wildlife photography.",
-      primaryButton: "LEARN MORE",
-      secondaryButton: "SUPPORT CONSERVATION"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=2000&q=80",
-      badge: "Expert Workshops",
-      title: "MASTER WILDLIFE\nPHOTOGRAPHY SKILLS",
-      description: "Enhance your photography skills with expert-led workshops and discover the secrets of capturing wildlife in their natural habitat.",
-      primaryButton: "JOIN WORKSHOP",
-      secondaryButton: "VIEW SCHEDULE"
-    }
-  ]
+  // Hero slides data - will be loaded from JSON
+  const [heroSlides, setHeroSlides] = useState<any[]>([])
+  const [heroSlidesLoading, setHeroSlidesLoading] = useState(true)
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
+  const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
+  const minYear = availableYears.length > 0 ? Math.min(...availableYears) : 2024
+  const maxYear = availableYears.length > 0 ? Math.max(...availableYears) : 2024
+
+
 
   useEffect(() => {
     const loadNewsData = async () => {
@@ -198,6 +117,107 @@ export default function HomePage() {
     loadNewsData()
   }, [])
 
+  useEffect(() => {
+    const loadWinnersData = async () => {
+      try {
+        const response = await fetch('/winners.json')
+        if (response.ok) {
+          const data = await response.json()
+          setWinnersByYearAndCategory(data)
+        }
+      } catch (error) {
+        console.error('Error loading winners data:', error)
+        // Fallback data if JSON loading fails
+        setWinnersByYearAndCategory({
+          2024: {
+            Open: [
+              { name: 'Chitral Rajiv Jayatilake', category: 'Winner - Lunging for Life', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-1.png', competitionCategory: 'Open' },
+              { name: 'Sujeewa Nishantha Mallawaarachchi', category: '1st runners-Up - Feeding Time ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-2.png', competitionCategory: 'Open' },
+              { name: 'Samith Chandula Perera', category: '2nd runners-Up -  Under the Wings of Danger', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-3.png', competitionCategory: 'Open' },
+            ],
+            Junior: [
+              { name: 'Danuja Santhusa Palihawadana Arachchi', category: 'Winner - Had Enough', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-1.png', competitionCategory: 'Junior' },
+              { name: 'Sesadi Wickramasinghe', category: '1st runners-Up - A Deadly Delicacy', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-2.png', competitionCategory: 'Junior' },
+              { name: 'Sesadi Wickramasinghe', category: '2nd runners-Up - Avian Elegance', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-3.png', competitionCategory: 'Junior' },
+            ]
+          }
+        })
+      } finally {
+        setWinnersLoading(false)
+      }
+    }
+
+    loadWinnersData()
+  }, [])
+
+  useEffect(() => {
+    const loadHeroSlidesData = async () => {
+      try {
+        const response = await fetch('/hero-slides.json')
+        if (response.ok) {
+          const data = await response.json()
+          setHeroSlides(data)
+        }
+      } catch (error) {
+        console.error('Error loading hero slides data:', error)
+        // Fallback data if JSON loading fails
+        setHeroSlides([
+          {
+            id: 1,
+            image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=80",
+            badge: "Wildlife Photography Competition",
+            title: "WILD SRI LANKA\nPHOTOGRAPHER OF THE YEAR 2025",
+            description: "Capture the untamed beauty of Sri Lanka's wildlife and compete with photographers worldwide in our prestigious annual competition.",
+            primaryButton: "ENTER THE COMPETITION",
+            primaryButtonHref: "/wpoty",
+            secondaryButton: "VIEW GALLERY",
+            secondaryButtonHref: "/projects"
+          },
+          {
+            id: 2,
+            image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=2000&q=80",
+            badge: "Conservation Through Art",
+            title: "PRESERVE NATURE\nTHROUGH PHOTOGRAPHY",
+            description: "Join our mission to document and protect Sri Lanka's biodiversity through the powerful medium of wildlife photography.",
+            primaryButton: "LEARN MORE",
+            primaryButtonHref: "/about-us",
+            secondaryButton: "SUPPORT CONSERVATION",
+            secondaryButtonHref: "/contact"
+          },
+          {
+            id: 3,
+            image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=2000&q=80",
+            badge: "Expert Workshops",
+            title: "MASTER WILDLIFE\nPHOTOGRAPHY SKILLS",
+            description: "Enhance your photography skills with expert-led workshops and discover the secrets of capturing wildlife in their natural habitat.",
+            primaryButton: null,
+            primaryButtonHref: "/contact",
+            secondaryButton: null,
+            secondaryButtonHref: "/projects"
+          }
+        ])
+      } finally {
+        setHeroSlidesLoading(false)
+      }
+    }
+
+    loadHeroSlidesData()
+  }, [])
+
+  // Auto-switch to available category when current category has no data
+  useEffect(() => {
+    if (winnersByYearAndCategory[selectedYear]) {
+      const hasOpenData = winnersByYearAndCategory[selectedYear].Open && winnersByYearAndCategory[selectedYear].Open.length > 0
+      const hasJuniorData = winnersByYearAndCategory[selectedYear].Junior && winnersByYearAndCategory[selectedYear].Junior.length > 0
+      
+      if (selectedCategory === 'Open' && !hasOpenData && hasJuniorData) {
+        setSelectedCategory('Junior')
+      } else if (selectedCategory === 'Junior' && !hasJuniorData && hasOpenData) {
+        setSelectedCategory('Open')
+      }
+    }
+  }, [selectedYear, winnersByYearAndCategory, selectedCategory])
+
   // Auto-play functionality
   useEffect(() => {
     if (newsData.length > 1) {
@@ -222,9 +242,7 @@ export default function HomePage() {
     return () => clearInterval(interval)
   }, [heroSlides.length])
   
-  const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => a - b)
-  const minYear = Math.min(...availableYears)
-  const maxYear = Math.max(...availableYears)
+
 
   // Function to format date
   const formatDate = (dateString: string) => {
@@ -266,10 +284,19 @@ export default function HomePage() {
       
       {/* Hero Section */}
       <section id="hero" className="relative w-full h-screen flex items-center overflow-hidden bg-black">
-        {/* Hero Slider */}
-        <div className="absolute inset-0">
-          <div className="relative w-full h-full">
-            {heroSlides.map((slide, index) => (
+        {heroSlidesLoading ? (
+          <div className="flex items-center justify-center w-full h-full">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary border-t-transparent mx-auto mb-6"></div>
+              <p className="text-white text-lg font-medium">Loading hero content...</p>
+            </div>
+          </div>
+        ) : (
+          <>
+            {/* Hero Slider */}
+            <div className="absolute inset-0">
+              <div className="relative w-full h-full">
+                {heroSlides.map((slide, index) => (
               <div
                 key={slide.id}
                 className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -303,13 +330,17 @@ export default function HomePage() {
                 {heroSlides[currentHeroSlide].description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl" style={{ backgroundColor: '#F0A641' }}>
-                  <span className="relative z-10">{heroSlides[currentHeroSlide].primaryButton}</span>
-                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
-                </button>
-                <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
-                  {heroSlides[currentHeroSlide].secondaryButton}
-                </button>
+                {heroSlides[currentHeroSlide].primaryButton && (
+                  <Link to={heroSlides[currentHeroSlide].primaryButtonHref} className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl" style={{ backgroundColor: '#F0A641' }}>
+                    <span className="relative z-10">{heroSlides[currentHeroSlide].primaryButton}</span>
+                    <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
+                  </Link>
+                )}
+                {heroSlides[currentHeroSlide].secondaryButton && (
+                  <Link to={heroSlides[currentHeroSlide].secondaryButtonHref} className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+                    {heroSlides[currentHeroSlide].secondaryButton}
+                  </Link>
+                )}
               </div>
             </div>
             
@@ -351,6 +382,8 @@ export default function HomePage() {
             />
           ))}
         </div>
+            </>
+          )}
       </section>
 
       {/* About Section */}
@@ -511,8 +544,15 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-primary"></div>
           </div>
           
-          {/* Year and Category Selection */}
-          <div className="mb-12">
+          {winnersLoading ? (
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary border-t-transparent mx-auto mb-6"></div>
+              <p className="text-gray-600 text-lg font-medium">Loading winners data...</p>
+            </div>
+          ) : (
+            <>
+              {/* Year and Category Selection */}
+              <div className="mb-12">
             <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between gap-8 md:gap-20">
               {/* Year Selection - Left Aligned */}
               <div className="md:w-1/2">
@@ -604,14 +644,17 @@ export default function HomePage() {
                     <div className="flex relative">
                       <div 
                         className={`absolute top-2 bottom-2 w-1/2 rounded-2xl transition-all duration-500 ease-out bg-primary ${
-                          selectedCategory === 'School' ? 'translate-x-full' : 'translate-x-0'
+                          selectedCategory === 'Junior' ? 'translate-x-full' : 'translate-x-0'
                         }`}
                       ></div>
                       <button
                         onClick={() => setSelectedCategory('Open')}
+                        disabled={!winnersByYearAndCategory[selectedYear]?.Open || winnersByYearAndCategory[selectedYear].Open.length === 0}
                         className={`flex-1 py-4 px-6 rounded-2xl font-semibold transition-all duration-500 flex items-center justify-center space-x-3 relative z-10 ${
                           selectedCategory === 'Open'
                             ? 'text-white'
+                            : !winnersByYearAndCategory[selectedYear]?.Open || winnersByYearAndCategory[selectedYear].Open.length === 0
+                            ? 'text-gray-400 cursor-not-allowed'
                             : 'text-gray-600 hover:text-primary'
                         }`}
                       >
@@ -621,10 +664,13 @@ export default function HomePage() {
                         <span className="font-medium">Open</span>
                       </button>
                       <button
-                        onClick={() => setSelectedCategory('School')}
+                        onClick={() => setSelectedCategory('Junior')}
+                        disabled={!winnersByYearAndCategory[selectedYear]?.Junior || winnersByYearAndCategory[selectedYear].Junior.length === 0}
                         className={`flex-1 py-4 px-6 rounded-2xl font-semibold transition-all duration-500 flex items-center justify-center space-x-3 relative z-10 ${
-                          selectedCategory === 'School'
+                          selectedCategory === 'Junior'
                             ? 'text-white'
+                            : !winnersByYearAndCategory[selectedYear]?.Junior || winnersByYearAndCategory[selectedYear].Junior.length === 0
+                            ? 'text-gray-400 cursor-not-allowed'
                             : 'text-gray-600 hover:text-primary'
                         }`}
                       >
@@ -632,7 +678,7 @@ export default function HomePage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         </svg>
-                        <span className="font-medium">School</span>
+                        <span className="font-medium">Junior</span>
                       </button>
                     </div>
                   </div>
@@ -675,6 +721,8 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+            </>
+          )}
         </div>
       </section>
 

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=80",
+    "badge": "Wildlife Photography Competition",
+    "title": "WILD SRI LANKA\nPHOTOGRAPHER OF THE YEAR 2025",
+    "description": "Capture the untamed beauty of Sri Lanka's wildlife and compete with photographers worldwide in our prestigious annual competition.",
+    "primaryButton": "ENTER THE COMPETITION",
+    "primaryButtonHref": "/wpoty",
+    "secondaryButton": "VIEW GALLERY",
+    "secondaryButtonHref": "/projects"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=2000&q=80",
+    "badge": "Conservation Through Art",
+    "title": "PRESERVE NATURE\nTHROUGH PHOTOGRAPHY",
+    "description": "Join our mission to document and protect Sri Lanka's biodiversity through the powerful medium of wildlife photography.",
+    "primaryButton": "LEARN MORE",
+    "primaryButtonHref": "/about-us",
+    "secondaryButton": "SUPPORT CONSERVATION",
+    "secondaryButtonHref": "/contact"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=2000&q=80",
+    "badge": "Expert Workshops",
+    "title": "MASTER WILDLIFE\nPHOTOGRAPHY SKILLS",
+    "description": "Enhance your photography skills with expert-led workshops and discover the secrets of capturing wildlife in their natural habitat.",
+    "primaryButton": null,
+    "primaryButtonHref": "/contact",
+    "secondaryButton": null,
+    "secondaryButtonHref": "/projects"
+  }
+]

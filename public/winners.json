@@ -1,0 +1,38 @@
+{
+  "2024": {
+    "Open": [
+      { "name": "Chitral Rajiv Jayatilake", "category": "Winner - Lunging for Life", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-1.png", "competitionCategory": "Open" },
+      { "name": "Sujeewa Nishantha Mallawaarachchi", "category": "1st runners-Up - Feeding Time ", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-2.png", "competitionCategory": "Open" },
+      { "name": "Samith Chandula Perera", "category": "2nd runners-Up -  Under the Wings of Danger", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-3.png", "competitionCategory": "Open" }
+    ],
+    "Junior": [
+      { "name": "Danuja Santhusa Palihawadana Arachchi", "category": "Winner - Had Enough", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-1.png", "competitionCategory": "Junior" },
+      { "name": "Sesadi Wickramasinghe", "category": "1st runners-Up - A Deadly Delicacy", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-2.png", "competitionCategory": "Junior" },
+      { "name": "Sesadi Wickramasinghe", "category": "2nd runners-Up - Avian Elegance", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-3.png", "competitionCategory": "Junior" }
+    ]
+  },
+  "2022": {
+    "Open": [
+      { "name": "Sudith Rodrigo", "category": "Winner  - Ravenous Beauty ", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-1.png", "competitionCategory": "Open" },
+      { "name": "Ravisara Jayamanna", "category": "1st runners-Up -  Expressed But Untold Love", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-2.png", "competitionCategory": "Open" },
+      { "name": "H.L. Prasantha Vinod", "category": "2nd runners-Up - Speed", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-3.png", "competitionCategory": "Open" }
+    ],
+    "Junior": []
+  },
+  "2019": {
+    "Open": [
+      { "name": "Gimantha Perera", "category": "Winner  - Hunter Hunted", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-1.png", "competitionCategory": "Open" },
+      { "name": "Wasiri Gajaman", "category": "1st runners-Up - Aerial Inspection", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-2.png", "competitionCategory": "Open" },
+      { "name": "Viraj Kothalawala", "category": "2nd runners-Up - CUrban Traveller", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-3.png", "competitionCategory": "Open" }
+    ],
+    "Junior": []
+  },
+  "2018": {
+    "Open": [
+      { "name": "Sujeeva Mallawaarachchi", "category": "Winner ", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-1.png", "competitionCategory": "Open" },
+      { "name": "Gimantha Perera", "category": "1st runners-Up ", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-2.png", "competitionCategory": "Open" },
+      { "name": "Ravisara Jayamanna", "category": "2nd runners-Up ", "image": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-3.png", "competitionCategory": "Open" }
+    ],
+    "Junior": []
+  }
+}

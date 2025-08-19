@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Navbar } from '../../components/header'
 import { ContactSection } from '../../components/contact-section'
 import { Footer } from '../../components/footer'
@@ -12,66 +12,66 @@ interface Winner {
   competitionCategory: 'Open' | 'Junior';
 }
 
-const winnersByYearAndCategory: Record<number, Record<'Open' | 'Junior', Winner[]>> = {
-  
-  2024: {
-    Open: [
-      { name: 'Chitral Rajiv Jayatilake', category: 'Winner - Lunging for Life', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-1.png', competitionCategory: 'Open' },
-      { name: 'Sujeewa Nishantha Mallawaarachchi', category: '1st runners-Up - Feeding Time ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-2.png', competitionCategory: 'Open' },
-      { name: 'Samith Chandula Perera', category: '2nd runners-Up -  Under the Wings of Danger', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-3.png', competitionCategory: 'Open' },
-    ],
-    Junior: [
-      { name: 'Danuja Santhusa Palihawadana Arachchi', category: 'Winner - Had Enough', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-1.png', competitionCategory: 'Junior' },
-      { name: 'Sesadi Wickramasinghe', category: '1st runners-Up - A Deadly Delicacy', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-2.png', competitionCategory: 'Junior' },
-      { name: 'Sesadi Wickramasinghe', category: '2nd runners-Up - Avian Elegance', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-3.png', competitionCategory: 'Junior' },
-    ]
-  },
-  2022: {
-    Open: [
-      { name: 'Sudith Rodrigo', category: 'Winner  - Ravenous Beauty ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-1.png', competitionCategory: 'Open' },
-      { name: 'Ravisara Jayamanna', category: '1st runners-Up -  Expressed But Untold Love', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-2.png', competitionCategory: 'Open' },
-      { name: 'H.L. Prasantha Vinod', category: '2st runners-Up - Speed', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/open/open-2022-3.png', competitionCategory: 'Open' },
-    ],
-    Junior: [
-      { name: 'Ava Martinez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Ethan Anderson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Isabella Thomas', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-    ]
-  },
-  2019: {
-    Open: [
-      { name: 'Gimantha Perera', category: 'Winner  - Hunter Hunted', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-1.png', competitionCategory: 'Open' },
-      { name: 'Wasiri Gajaman', category: '1st runners-Up - Aerial Inspection', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-2.png', competitionCategory: 'Open' },
-      { name: 'Viraj Kothalawala', category: '2st runners-Up - CUrban Traveller', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/open/open-2019-3.png', competitionCategory: 'Open' },
-    ],
-    Junior: [
-      { name: 'Mia Rodriguez', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Lucas Johnson', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Zoe Williams', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-    ]
-  },
-  2018: {
-    Open: [
-      { name: 'Sujeeva Mallawaarachchi', category: 'Winner ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-1.png', competitionCategory: 'Open' },
-      { name: 'Gimantha Perera', category: '1st runners-Up ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-2.png', competitionCategory: 'Open' },
-      { name: 'Ravisara Jayamanna', category: '2st runners-Up ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/open/open-2018-1.png', competitionCategory: 'Open' },
-    ],
-    Junior: [
-      { name: 'Chloe Davis', category: 'First Place - Wildlife Portrait', image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Nathan Brown', category: 'First Place - Landscape', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-      { name: 'Ella Wilson', category: 'First Place - Conservation Story', image: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80', competitionCategory: 'Junior' },
-    ]
-  },
-}
+
 
 export default function WPOYPage() {
-  const [selectedYear, setSelectedYear] = useState(2025)
+  const [selectedYear, setSelectedYear] = useState(2024)
   const [selectedCategory, setSelectedCategory] = useState<'Open' | 'Junior'>('Open')
+  const [winnersByYearAndCategory, setWinnersByYearAndCategory] = useState<Record<number, Record<'Open' | 'Junior', Winner[]>>>({})
+  const [winnersLoading, setWinnersLoading] = useState(true)
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
-  const minYear = Math.min(...availableYears)
-  const maxYear = Math.max(...availableYears)
+  const minYear = availableYears.length > 0 ? Math.min(...availableYears) : 2024
+  const maxYear = availableYears.length > 0 ? Math.max(...availableYears) : 2024
+
+  useEffect(() => {
+    const loadWinnersData = async () => {
+      try {
+        const response = await fetch('/winners.json')
+        if (response.ok) {
+          const data = await response.json()
+          setWinnersByYearAndCategory(data)
+        }
+      } catch (error) {
+        console.error('Error loading winners data:', error)
+        // Fallback data if JSON loading fails
+        setWinnersByYearAndCategory({
+          2024: {
+            Open: [
+              { name: 'Chitral Rajiv Jayatilake', category: 'Winner - Lunging for Life', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-1.png', competitionCategory: 'Open' },
+              { name: 'Sujeewa Nishantha Mallawaarachchi', category: '1st runners-Up - Feeding Time ', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-2.png', competitionCategory: 'Open' },
+              { name: 'Samith Chandula Perera', category: '2nd runners-Up -  Under the Wings of Danger', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/open/open-2024-3.png', competitionCategory: 'Open' },
+            ],
+            Junior: [
+              { name: 'Danuja Santhusa Palihawadana Arachchi', category: 'Winner - Had Enough', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-1.png', competitionCategory: 'Junior' },
+              { name: 'Sesadi Wickramasinghe', category: '1st runners-Up - A Deadly Delicacy', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-2.png', competitionCategory: 'Junior' },
+              { name: 'Sesadi Wickramasinghe', category: '2nd runners-Up - Avian Elegance', image: 'https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/junior/junior-2024-3.png', competitionCategory: 'Junior' },
+            ]
+          }
+        })
+      } finally {
+        setWinnersLoading(false)
+      }
+    }
+
+    loadWinnersData()
+  }, [])
+
+  // Auto-switch to available category when current category has no data
+  useEffect(() => {
+    if (winnersByYearAndCategory[selectedYear]) {
+      const hasOpenData = winnersByYearAndCategory[selectedYear].Open && winnersByYearAndCategory[selectedYear].Open.length > 0
+      const hasJuniorData = winnersByYearAndCategory[selectedYear].Junior && winnersByYearAndCategory[selectedYear].Junior.length > 0
+      
+      if (selectedCategory === 'Open' && !hasOpenData && hasJuniorData) {
+        setSelectedCategory('Junior')
+      } else if (selectedCategory === 'Junior' && !hasJuniorData && hasOpenData) {
+        setSelectedCategory('Open')
+      }
+    }
+  }, [selectedYear, winnersByYearAndCategory, selectedCategory])
+
   return (
     <>
       <Navbar />
@@ -452,9 +452,12 @@ export default function WPOYPage() {
                       ></div>
                       <button
                         onClick={() => setSelectedCategory('Open')}
+                        disabled={!winnersByYearAndCategory[selectedYear]?.Open || winnersByYearAndCategory[selectedYear].Open.length === 0}
                         className={`flex-1 py-4 px-6 rounded-2xl font-semibold transition-all duration-500 flex items-center justify-center space-x-3 relative z-10 ${
                           selectedCategory === 'Open'
                             ? 'text-white'
+                            : !winnersByYearAndCategory[selectedYear]?.Open || winnersByYearAndCategory[selectedYear].Open.length === 0
+                            ? 'text-gray-400 cursor-not-allowed'
                             : 'text-gray-600 hover:text-primary'
                         }`}
                       >
@@ -465,9 +468,12 @@ export default function WPOYPage() {
                       </button>
                       <button
                         onClick={() => setSelectedCategory('Junior')}
+                        disabled={!winnersByYearAndCategory[selectedYear]?.Junior || winnersByYearAndCategory[selectedYear].Junior.length === 0}
                         className={`flex-1 py-4 px-6 rounded-2xl font-semibold transition-all duration-500 flex items-center justify-center space-x-3 relative z-10 ${
                           selectedCategory === 'Junior'
                             ? 'text-white'
+                            : !winnersByYearAndCategory[selectedYear]?.Junior || winnersByYearAndCategory[selectedYear].Junior.length === 0
+                            ? 'text-gray-400 cursor-not-allowed'
                             : 'text-gray-600 hover:text-primary'
                         }`}
                       >
