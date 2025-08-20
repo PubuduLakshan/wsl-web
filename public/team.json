@@ -1,12 +1,13 @@
 {
   "boardOfficials": [
     {
-      "id": "raveendra-siriwardene-president",
+      "id": "raveendra-siriwardene",
       "name": "RAVEENDRA SIRIWARDENE",
-      "position": "President",
+      "position": "President | CO-FOUNDER",
       "email": "nina.genzarry@team.collection",
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-      "bio": "Raveendra is an experienced wildlife photographer and researcher focused on leopards in Sri Lanka. He co-founded the Yala Leopard Diary, Wild Tuskers of Sri Lanka, the Yala Leopard Centre in Yala National Park, and the Hill Country Leopard Conservation Initiative. His significant contribution to the Leopard Research Team, which pioneered the Multipoint Leopard Identification method, is a monumental achievement. This innovative identification technique ensures accurate leopard identification, addressing the issue of overestimating leopard populations in Sri Lanka. Raveendra's commitment to wildlife photography has earned him prestigious awards.",      "website": "https://clarahuel.com",
+      "bio": "Raveendra is an experienced wildlife photographer and researcher focused on leopards in Sri Lanka. He co-founded the Yala Leopard Diary, Wild Tuskers of Sri Lanka, the Yala Leopard Centre in Yala National Park, and the Hill Country Leopard Conservation Initiative. His significant contribution to the Leopard Research Team, which pioneered the Multipoint Leopard Identification method, is a monumental achievement. This innovative identification technique ensures accurate leopard identification, addressing the issue of overestimating leopard populations in Sri Lanka. Raveendra's commitment to wildlife photography has earned him prestigious awards.", 
+      "website": "https://clarahuel.com",
       "facebook": "https://facebook.com/clarahuel",
       "instagram": "https://instagram.com/clarahuel",
       "galleryImages": [
@@ -22,107 +23,218 @@
       ]
     },
     {
-      "id": "clara-huel-vice-president",
-      "name": "Clara Huel",
-      "position": "Vice President",
+      "id": "banu-mapalagama",
+      "name": "BANU MAPALAGAMA",
+      "position": "Secretary",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786",
-      "bio": "Clara Huel is a passionate wildlife photographer and conservation advocate with over 10 years of experience in documenting Sri Lanka's diverse ecosystems. Her work has been featured in numerous international publications and she has received multiple awards for her contributions to wildlife photography. Clara specializes in bird photography and has documented over 200 species native to Sri Lanka.",
-      "website": "https://clarahuel.com",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "bio": "Banu, an experienced wildlife photographer, commenced his photographic journey in 2004 with the School Photographic Society. His passion for wildlife photography ignited in 2012, driven by a desire to contribute to wildlife conservation. Holder of an \"Advanced Certificate of Wildlife Conservation and Management\" from OUSL, Banu is a dedicated wildlife enthusiast committed to safeguarding the country's diverse fauna. His accomplishments include winning a merit award at the Photography State Awards Ceremony in 2016 and 2017. Some of Banu's photographs have received recognition in international competitions like \"The Sanctuary Wildlife Photography Awards\" and the \"Siena International Photo Awards.\" His work stands as a testament to his commitment to wildlife conservation.", 
+       "website": "https://clarahuel.com",
       "facebook": "https://facebook.com/clarahuel",
       "instagram": "https://instagram.com/clarahuel",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca",
-        "https://images.unsplash.com/photo-1541961017774-22349e4a1262"
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Bhanu/9.png"
       ]
     },
     {
-      "id": "max-collins-secretary",
-      "name": "Max Collins",
-      "position": "Secretary",
+      "id": "tharindu-sendanayake",
+      "name": "THARINDU SENDANAYAKE",
+      "position": "Treasurer",
       "email": "m.collins@team.collection",
       "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      "bio": "Max Collins is a dedicated conservationist and wildlife photographer who has been working with Wild Sri Lanka for over 8 years. His expertise lies in landscape photography and he has captured some of the most stunning natural scenes across Sri Lanka's national parks and wildlife sanctuaries.",
+      "bio": "By profession, Tharindu delves into the world of data analysis, uncovering insights and patterns. When he's not crunching numbers, he's chasing moments in the wild with his camera, capturing the breathtaking beauty of nature through wildlife photography. This dual passion for analyzing information and preserving the wonders of the natural world keeps him curious and inspired every day. Since embarking on his wildlife photography journey in 2018, he has found boundless inspiration in capturing the untamed beauty of nature. With a special fascination for leopards and majestic tuskers, he has dedicated his lens to preserving their grace and magnificence. Alongside these passions, he immerses himself in the art of bird photography, seeking to freeze moments of avian splendor in their natural habitats. Each click of the shutter allows him to share the awe-inspiring stories of these remarkable creatures through his lens.",
       "website": "https://maxcollinsphotography.com",
       "facebook": "https://facebook.com/maxcollins",
       "instagram": "https://instagram.com/maxcollins",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
-        "https://images.unsplash.com/photo-1518837695005-2083093ee35b"
       ]
     },
     {
-      "id": "niro-genzarry-treasurer",
-      "name": "Niro Genzarry",
-      "position": "Treasurer",
-      "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-    },
-    {
-      "id": "clara-huel-board-member-1",
-      "name": "Clara Huel",
-      "position": "Board Member",
-      "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786",
-    "instagram": "https://instagram.com/maxcollins",
+      "id": "isuru-praveen",
+      "name": "ISURU PRAVEEN",
+      "position": "Vice President | CO-FOUNDER",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Isuru, an internationally acclaimed wildlife photographer and co-founder of the Wild Sri Lanka group, stands as a distinguished figure in the realm of nature photography. Commencing his photographic journey in 2013, Isuru has garnered numerous accolades, including state awards, FIAP, PSA, and GPU gold medals, with more than 800 international acceptances spanning across 40+ countries. Beyond his remarkable achievements, Isuru is committed to nurturing the next generation of photographers through engaging photography lectures and wildlife workshops. As the owner of IK Photography & Cinematography, he continues his career as a professional wedding and event photographer. Driven by his profound love for nature, he actively maintains his passion for wildlife photography, aspiring to capture the beauty of the natural world and inspire others along the way.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
-        "https://images.unsplash.com/photo-1518837695005-2083093ee35b",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Isuru/9.png"
       ]
     },
     {
-      "id": "max-collins-board-member-1",
-      "name": "Max Collins",
-      "position": "Board Member",
+      "id": "ashane-marasinghe",
+      "name": "ASHANE MARASINGHE",
+      "position": "Vice Secretary",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Ashane is a renowned wildlife photographer with a career as a sales supervisor in an international airline. His journey in photography began in 2013, and he earned a Diploma in Advanced Photography from NAPSL in 2014. He has received numerous international awards and distinctions. His distinctions include EFIAP/b from the International Federation of Photographic Art (France, 2021), GPU Crown 02 from the Global Photographic Union (Greece, 2020), and cMOL from Master of Lights (Canada, 2019). Some of  international awards include: First runners up in the DJ Memorial Photography Competition in India (2020); Finalist award in the Big Picture Natural World Photography Competition in the USA (2021); Commendation in the Bird Photographer of the Year in the United Kingdom (2021); Category Winner in the \"Man and Nature\" section of the \"Magical Nature - Nature Photography of the Year 2021\"; Merit Award in the DJ Memorial Photography Competition in India (2022); Jury Selection in the Creative Nature Photography category in Nature InFocus 2022 in India; FIAP Bronze Medal in the \"14th IPS The Wild 2023 - Bulgaria\" organized by the Academy of Photography Bulgaria (2023); 01st place in the Biodiversity Photography Contest-2023 (FIIN) in Portugal; Bronze award in the Wildlife category at the Black and White Photo Contest 2023 by Refocus Awards in the United States. In addition to his awards, Ashane has been featured in prestigious magazines such as GEO Magazine (Germany), VIEW Magazine (Germany), and National Geographic (Italy).",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Ashen/9.png"
+      ]
     },
     {
-      "id": "niro-genzarry-board-member-1",
-      "name": "Niro Genzarry",
-      "position": "Board Member",
-      "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-    },
-    {
-      "id": "clara-huel-board-member-2",
-      "name": "Clara Huel",
-      "position": "Board Member",
-      "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
-    },
-    {
-      "id": "max-collins-board-member-2",
-      "name": "Max Collins",
-      "position": "Board Member",
+      "id": "namal-herath",
+      "name": "NAMAL HERATH",
+      "position": "Vice Treasurer",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Lakshitha is an internationally acclaimed wildlife photographer and co-founder of the Wild Sri Lanka group. A recipient of the Fellowship of The Royal Photographic Society (FRPS). Notable accolades include the Grand Prize in Nature's Best Photography 2017 USA, the second prize in Sanctuary Wildlife Photography Awards 2018, and the prestigious title of Africa’s Photographer of the Year 2018, etc. Inspired by Sir David Attenborough, Lakshitha's fascination with nature and wildlife started early, culminating in a career that combines his profession in tea tasting with his true passion for exploring the wilderness. His photographic journeys across Asia, Europe, Africa, and the Arctic reflect a profound commitment to capturing the essence of nature. Lakshitha believes in the transformative power of his art to raise conservation awareness and inspire a deeper connection with the natural world.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+      ]
     },
     {
-      "id": "niro-genzarry-board-member-2",
-      "name": "Niro Genzarry",
-      "position": "Board Member",
-      "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-    },
-    {
-      "id": "clara-huel-board-member-3",
-      "name": "Clara Huel",
-      "position": "Board Member",
-      "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
-    },
-    {
-      "id": "max-collins-board-member-3",
-      "name": "Max Collins",
-      "position": "Board Member",
+      "id": "sadeepa-gunawardana",
+      "name": "SADEEPA GUNAWARDANA",
+      "position": "WPL Event Secretary | CO-FOUNDER",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Sadeepa, an experienced wildlife photographer and activist, is a co-founder of the Wild Sri Lanka group, a co-author for the Avium Coffee Table book, a co-founder of Wild Tuskers of Sri Lanka, and a team member for the Yala Leopard Identification Guide. Currently, he serves as the President of our \"Wild Sri Lanka\" group. Sadeepa's journey into nature photography began in 2012, with a primary focus on capturing the behavior of birds. Notably, he and his team were entrusted by the Department of Wildlife Conservation to create a comprehensive field manual on leopard identification in Yala in 2019. They established the Yala Leopard Centre, the world's first information center dedicated solely to leopards, located within Yala National Park. Despite his academic background in marketing and information technology, Sadeepa's profound connection to the natural world remains unwavering. Sadeepa holds a master's degree in marketing and information technology from the Freiberg Mining and Technical University in Germany, but the natural world will always hold a special place in his heart and soul. His unshakable passion to preserve nature and instill in the next generation the importance of acting responsibly in the wild continues to be his driving force.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Sadeepa/9.png"
+      ]
+    },
+    {
+      "id": "mithun-senanayake",
+      "name": "MITHUN SENANAYAKE",
+      "position": "WPOTY Event Secretary",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Mithun, an accomplished and award-winning wildlife photographer, embarked on his photographic journey in 2013 as a member of the Young Zoologist's Association of Sri Lanka Wildlife Photography Society. His notable achievements include securing 2nd place in the wildlife category and receiving a merit award at the Photography State Awards Ceremony in 2018. Mithun's photographic prowess extends beyond national recognition, with some of his works gaining acclaim in international competitions such as \"The Sanctuary Wildlife Photography Awards.\" Apart from his success in photography, he passionately shares his knowledge and skills by conducting workshops related to wildlife photography for enthusiasts in Sri Lanka.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Mithun/9.png"
+      ]
+    },
+    {
+      "id": "pasan-seneviratne",
+      "name": "PASAN SENEVIRATHNE",
+      "position": "Committee Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Pasan has been an experienced wildlife photographer in Sri Lanka since 2013. By profession, he is a graphic designer and a photographer.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": []
+    },
+    {
+      "id": "chamal-jayasekara",
+      "name": "CHAMAL JAYASEKARA",
+      "position": "Committee Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Chamal, a mechanical engineer by profession with a degree from the University of Moratuwa, Sri Lanka, has seamlessly blended his technical expertise with a profound passion for wildlife and landscape photography. Beginning his photographic journey as a hobbyist in 2017, Chamal has since delved into captivating explorations of landscapes, astrophotography, and wildlife. His dedication is evident through notable achievements, including a Merit recipient in state photography awards, recognition in the WSLPOY, FIAP HM in PSSL competition, and the prestigious title of Nethadara 2018 winner. Beyond photography, Chamal actively contributes to conservation efforts, conducting workshops for students to highlight the crucial role photography plays in raising environmental awareness and fostering a deeper connection with nature.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Chamal/9.png"
+      ]
+    },
+    {
+      "id": "lakshitha-karunarathne",
+      "name": "LAKSHITHA KARUNARATHNE",
+      "position": "Committee Member | CO-FOUNDER",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Lakshitha is an internationally acclaimed wildlife photographer and co-founder of the Wild Sri Lanka group. A recipient of the Fellowship of The Royal Photographic Society (FRPS). Notable accolades include the Grand Prize in Nature's Best Photography 2017 USA, the second prize in Sanctuary Wildlife Photography Awards 2018, and the prestigious title of Africa’s Photographer of the Year 2018, etc. Inspired by Sir David Attenborough, Lakshitha's fascination with nature and wildlife started early, culminating in a career that combines his profession in tea tasting with his true passion for exploring the wilderness. His photographic journeys across Asia, Europe, Africa, and the Arctic reflect a profound commitment to capturing the essence of nature. Lakshitha believes in the transformative power of his art to raise conservation awareness and inspire a deeper connection with the natural world.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Lakshitha/9.png"
+      ]
+    },
+    {
+      "id": "milinda-wattegedara",
+      "name": "MILINDA WATTEGEDARA",
+      "position": "Committee Member",
+      "email": "m.collins@team.collection",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "bio": "Milinda is an experienced wildlife photographer and researcher on leopards in Sri Lanka. He is the co-founder of the Yala Leopard Diary, Wild Tuskers of Sri Lanka, the Yala Leopard Centre in Yala National Park, and the Hill Country Leopard Conservation Initiative. Additionally, Milinda is a co-author of the Yala Leopard Identification Guide, the Kalawewa Tusker Identification Guide, and Avium. His involvement in the Leopard Research Team, which pioneered the Multipoint Leopard Identification method, stands as a momentous achievement. This innovative identification technique ensures accurate leopard identification, eliminating the overestimation of leopard populations in Sri Lanka. Milinda's dedication to wildlife photography has earned him prestigious awards, including the Winner of the 2017 Sanctuary Asia Call of the Wildlife Photography Awards, a Special Mention in 2016, Sanctuary Asia Call of the Wildlife Photography Awards, and the Best of the Show 2016 and Best Wildlife Picture 2016 from the Photographic Society of Sri Lanka.",
+      "website": "https://maxcollinsphotography.com",
+      "facebook": "https://facebook.com/maxcollins",
+      "instagram": "https://instagram.com/maxcollins",
+      "galleryImages": [
+       "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Milinda/9.png"
+      ]
     }
   ],
   "moderaTeam": [
@@ -130,31 +242,31 @@
       "id": "niro-genzarry-moderator-1",
       "name": "Niro Genzarry",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": "clara-huel-moderator-1",
       "name": "Clara Huel",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": "max-collins-moderator-1",
       "name": "Max Collins",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": "niro-genzarry-moderator-2",
       "name": "Niro Genzarry",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
     },
     {
       "id": "clara-huel-moderator-2",
       "name": "Clara Huel",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
     }
   ]
 } 
