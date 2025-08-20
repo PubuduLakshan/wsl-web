@@ -21,6 +21,14 @@ interface WPOYConfig {
   resultsDate: string;
 }
 
+interface GalleryImage {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+}
+
 export default function WPOYPage() {
   const [selectedYear, setSelectedYear] = useState(2024)
   const [selectedCategory, setSelectedCategory] = useState<'Open' | 'Junior'>('Open')
@@ -28,6 +36,12 @@ export default function WPOYPage() {
   const [winnersLoading, setWinnersLoading] = useState(true)
   const [wpotyConfig, setWpotyConfig] = useState<WPOYConfig | null>(null)
   const [configLoading, setConfigLoading] = useState(true)
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([])
+  const [galleryLoading, setGalleryLoading] = useState(true)
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedWinner, setSelectedWinner] = useState<Winner | null>(null)
+  const [isWinnerModalOpen, setIsWinnerModalOpen] = useState(false)
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
@@ -87,8 +101,40 @@ export default function WPOYPage() {
       }
     }
 
+    const loadGalleryData = async () => {
+      try {
+        const response = await fetch('/wpoty-gallery.json')
+        if (response.ok) {
+          const data = await response.json()
+          setGalleryImages(data.galleryImages)
+        }
+      } catch (error) {
+        console.error('Error loading gallery data:', error)
+        // Fallback gallery data if JSON loading fails
+        setGalleryImages([
+          {
+            id: 1,
+            src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+            alt: "Leopard in tree with person observing",
+            title: "Wildlife Photography",
+            description: "Capturing nature's essence"
+          },
+          {
+            id: 2,
+            src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+            alt: "Indoor exhibition with people viewing photos",
+            title: "Gallery Exhibition",
+            description: "Showcasing talent"
+          }
+        ])
+      } finally {
+        setGalleryLoading(false)
+      }
+    }
+
     loadWinnersData()
     loadWPOYConfig()
+    loadGalleryData()
   }, [])
 
   // Auto-switch to available category when current category has no data
@@ -104,6 +150,49 @@ export default function WPOYPage() {
       }
     }
   }, [selectedYear, winnersByYearAndCategory, selectedCategory])
+
+  // Handle modal open/close
+  const openModal = (image: GalleryImage) => {
+    setSelectedImage(image)
+    setIsModalOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedImage(null)
+    document.body.style.overflow = 'unset'
+  }
+
+  // Handle winner modal open/close
+  const openWinnerModal = (winner: Winner) => {
+    setSelectedWinner(winner)
+    setIsWinnerModalOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeWinnerModal = () => {
+    setIsWinnerModalOpen(false)
+    setSelectedWinner(null)
+    document.body.style.overflow = 'unset'
+  }
+
+  // Close modals on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (isModalOpen) {
+          closeModal()
+        }
+        if (isWinnerModalOpen) {
+          closeWinnerModal()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isModalOpen, isWinnerModalOpen])
 
   return (
     <>
@@ -122,258 +211,21 @@ export default function WPOYPage() {
           <div className="mb-12">
             <div className="mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Launched in 2018, the Wild Srilanka Photographer of the Year competition has become one of the country’s most popular platforms for wildlife photography. Organized by Wild Srilanka, a community-driven group of over 52,000 members, the event not only showcases the talent of Sri Lanka’s photographers but also uses photography as a powerful tool for conservation.              
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">The competition now features <strong>two categories</strong>:</p>
+              <br />
+              <p className="text-lg text-gray-700 leading-relaxed"><strong>Open Category</strong> – welcoming participants over 18, with winners, merit awards, and exhibition acceptances.</p>
+              <p className="text-lg text-gray-700 leading-relaxed"><strong>Junior Category</strong> – introduced in 2024 for school students aged 17 and below, offering free submissions and dedicated recognition to encourage the next generation of wildlife photographers.</p>
             </div>
             
             <div className="mb-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          
-          {/* Extended Modern Image Grid */}
-          <div className="mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-              {/* Row 1: Large + 2 Medium */}
-              <div className="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" 
-                  alt="Leopard in tree with person observing" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-xl mb-2">Wildlife Photography</h3>
-                  <p className="text-base text-gray-200">Capturing nature's essence</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" 
-                  alt="Indoor exhibition with people viewing photos" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Gallery Exhibition</h3>
-                  <p className="text-sm text-gray-200">Showcasing talent</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" 
-                  alt="Exhibition with Wild Sri Lanka branding" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Conservation Story</h3>
-                  <p className="text-sm text-gray-200">Preserving nature</p>
-                </div>
-              </div>
-              
-              {/* Row 2: 4 Small Images */}
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" 
-                  alt="Group of men with Wild Sri Lanka bags" 
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Team Event</h3>
-                  <p className="text-sm text-gray-200">Community gathering</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
-                  alt="Gallery with framed nature photographs" 
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Art Gallery</h3>
-                  <p className="text-sm text-gray-200">Framed masterpieces</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80" 
-                  alt="Man in green shirt viewing photographs" 
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Visitor Experience</h3>
-                  <p className="text-sm text-gray-200">Engaging displays</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
-                  alt="Man with red backpack viewing gallery" 
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Photography Exhibition</h3>
-                  <p className="text-sm text-gray-200">Celebrating wildlife</p>
-                </div>
-              </div>
-              
-              {/* Row 3: 2 Medium + Large */}
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80" 
-                  alt="Elephant in natural habitat" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Elephant Family</h3>
-                  <p className="text-sm text-gray-200">Majestic wildlife</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-3 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80" 
-                  alt="Bird in flight" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg mb-1">Bird Photography</h3>
-                  <p className="text-sm text-gray-200">Avian beauty</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" 
-                  alt="Leopard in natural environment" 
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-xl mb-2">Leopard Portrait</h3>
-                  <p className="text-base text-gray-200">Rare wildlife capture</p>
-                </div>
-              </div>
-              
-              {/* Row 4: 6 Small Images */}
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=400&q=80" 
-                  alt="Elephant close-up" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Elephant Eye</h3>
-                  <p className="text-xs text-gray-200">Intimate moment</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=400&q=80" 
-                  alt="Bird perched" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Bird Perched</h3>
-                  <p className="text-xs text-gray-200">Natural pose</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" 
-                  alt="Gallery interior" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Gallery Space</h3>
-                  <p className="text-xs text-gray-200">Exhibition hall</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" 
-                  alt="Conservation work" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Conservation</h3>
-                  <p className="text-xs text-gray-200">Protecting nature</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" 
-                  alt="Team collaboration" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Team Work</h3>
-                  <p className="text-xs text-gray-200">Collaboration</p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" 
-                  alt="Art display" 
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-sm mb-1">Art Display</h3>
-                  <p className="text-xs text-gray-200">Creative showcase</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom Text Blocks */}
-          <div>
-            <div className="mb-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            
-            <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">Entries are judged with strict authenticity standards, requiring original RAW files to ensure that photographs are free from manipulation or AI-generated elements.</p>
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">Beyond the competition, <em>Wild Srilanka</em> hosts <strong>workshops and awareness programs</strong> aimed at inspiring both amateur and professional photographers to deepen their knowledge of wildlife, ecosystems, and the role of photography in conservation. Proceeds and initiatives linked to the competition also support various conservation projects and awareness programs that contribute to protecting wildlife and promoting sustainable coexistence with nature.</p>
+
+              <p className="text-lg text-gray-700 leading-relaxed">With each passing year, the <strong>Wild Srilanka Photographer of the Year</strong> continues to grow in scale and impact, providing a platform where creativity, conservation, and community come together.</p>
+
             </div>
           </div>
         </div>
@@ -678,16 +530,23 @@ export default function WPOYPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {currentWinners.map((winner: Winner, index: number) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <div className="relative">
+              <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="relative cursor-pointer" onClick={() => openWinnerModal(winner)}>
                   <img 
                     src={winner.image} 
                     alt={winner.name} 
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                   />
 
                   <div className="absolute top-2 left-2 bg-[#F0A641] text-white px-2 py-1 rounded text-xs font-semibold">
                     {winner.competitionCategory}
+                  </div>
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="bg-white/90 rounded-lg px-4 py-2 text-black font-semibold">
+                      Click to view
+                    </div>
                   </div>
                 </div>
                 <div className="p-6 text-center">
@@ -700,11 +559,150 @@ export default function WPOYPage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-20" style={{ backgroundColor: '#f8f6f2' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-4xl font-bold text-black mb-4">GALLERY</h2>
+            <div className="w-24 h-1 bg-primary"></div>
+          </div>
+          
+          {/* Optimized Gallery Grid */}
+          <div className="mb-12">
+            {galleryLoading ? (
+              <div className="flex justify-center items-center py-20">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                {galleryImages.map((image) => (
+                  <div 
+                    key={image.id}
+                    className="group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500 cursor-pointer"
+                    onClick={() => openModal(image)}
+                  >
+                    <div className="aspect-[4/3] relative">
+                      <img 
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 className="font-semibold text-lg mb-1">
+                          {image.title}
+                        </h3>
+                        <p className="text-sm text-gray-200">
+                          {image.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <ContactSection />
 
       {/* Footer */}
       <Footer />
+
+      {/* Image Modal */}
+      {isModalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl max-h-full w-full">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+              
+              {/* Image Info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {selectedImage.title}
+                </h3>
+                <p className="text-lg text-gray-200">
+                  {selectedImage.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Click outside to close */}
+            <div 
+              className="absolute inset-0 -z-10" 
+              onClick={closeModal}
+            ></div>
+          </div>
+        </div>
+      )}
+
+      {/* Winner Modal */}
+      {isWinnerModalOpen && selectedWinner && (
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl max-h-full w-full">
+            {/* Close Button */}
+            <button
+              onClick={closeWinnerModal}
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={selectedWinner.image}
+                alt={selectedWinner.name}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+              
+              {/* Winner Info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="bg-[#F0A641] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {selectedWinner.competitionCategory}
+                  </span>
+                  <span className="text-white/80 text-sm">
+                    {selectedYear} Winner
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {selectedWinner.name}
+                </h3>
+                <p className="text-lg text-gray-200">
+                  {selectedWinner.category}
+                </p>
+              </div>
+            </div>
+
+            {/* Click outside to close */}
+            <div 
+              className="absolute inset-0 -z-10" 
+              onClick={closeWinnerModal}
+            ></div>
+          </div>
+        </div>
+      )}
     </>
   )
 } 

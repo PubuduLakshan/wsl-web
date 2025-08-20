@@ -1,0 +1,116 @@
+{
+  "galleryImages": [
+    {
+      "id": 1,
+      "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+      "alt": "Leopard in tree with person observing",
+      "title": "Wildlife Photography",
+      "description": "Capturing nature's essence"
+    },
+    {
+      "id": 2,
+      "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
+      "alt": "Indoor exhibition with people viewing photos",
+      "title": "Gallery Exhibition",
+      "description": "Showcasing talent"
+    },
+    {
+      "id": 3,
+      "src": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+      "alt": "Exhibition with Wild Sri Lanka branding",
+      "title": "Conservation Story",
+      "description": "Preserving nature"
+    },
+    {
+      "id": 4,
+      "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
+      "alt": "Group of men with Wild Sri Lanka bags",
+      "title": "Team Event",
+      "description": "Community gathering"
+    },
+    {
+      "id": 5,
+      "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "alt": "Gallery with framed nature photographs",
+      "title": "Art Gallery",
+      "description": "Framed masterpieces"
+    },
+    {
+      "id": 6,
+      "src": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
+      "alt": "Man in green shirt viewing photographs",
+      "title": "Visitor Experience",
+      "description": "Engaging displays"
+    },
+    {
+      "id": 7,
+      "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+      "alt": "Man with red backpack viewing gallery",
+      "title": "Photography Exhibition",
+      "description": "Celebrating wildlife"
+    },
+    {
+      "id": 8,
+      "src": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
+      "alt": "Elephant in natural habitat",
+      "title": "Elephant Family",
+      "description": "Majestic wildlife"
+    },
+    {
+      "id": 9,
+      "src": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80",
+      "alt": "Bird in flight",
+      "title": "Bird Photography",
+      "description": "Avian beauty"
+    },
+    {
+      "id": 10,
+      "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+      "alt": "Leopard in natural environment",
+      "title": "Leopard Portrait",
+      "description": "Rare wildlife capture"
+    },
+    {
+      "id": 11,
+      "src": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=400&q=80",
+      "alt": "Elephant close-up",
+      "title": "Elephant Eye",
+      "description": "Intimate moment"
+    },
+    {
+      "id": 12,
+      "src": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=400&q=80",
+      "alt": "Bird perched",
+      "title": "Bird Perched",
+      "description": "Natural pose"
+    },
+    {
+      "id": 13,
+      "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+      "alt": "Gallery interior",
+      "title": "Gallery Space",
+      "description": "Exhibition hall"
+    },
+    {
+      "id": 14,
+      "src": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "alt": "Conservation work",
+      "title": "Conservation",
+      "description": "Protecting nature"
+    },
+    {
+      "id": 15,
+      "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
+      "alt": "Team collaboration",
+      "title": "Team Work",
+      "description": "Collaboration"
+    },
+    {
+      "id": 16,
+      "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "alt": "Art display",
+      "title": "Art Display",
+      "description": "Creative showcase"
+    }
+  ]
+}
