@@ -54,6 +54,10 @@ export default function HomePage() {
   const [featuredImages, setFeaturedImages] = useState<FeaturedImage[]>([])
   const [featuredImagesLoading, setFeaturedImagesLoading] = useState(true)
   
+  // WPOY config data - will be loaded from JSON
+  const [wpotyConfig, setWpotyConfig] = useState<any>(null)
+  const [wpotyConfigLoading, setWpotyConfigLoading] = useState(true)
+  
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
   const minYear = availableYears.length > 0 ? Math.min(...availableYears) : 2024
@@ -153,8 +157,32 @@ export default function HomePage() {
       }
     }
 
+    const loadWPOYConfig = async () => {
+      try {
+        const response = await fetch('/wpoty-config.json')
+        if (response.ok) {
+          const data = await response.json()
+          setWpotyConfig(data)
+        }
+      } catch (error) {
+        console.error('Error loading WPOY config:', error)
+        // Fallback config if JSON loading fails
+        setWpotyConfig({
+          isAnnounced: false,
+          currentYear: 2025,
+          googleSheetLink: '',
+          announcementDate: '',
+          submissionDeadline: '',
+          resultsDate: ''
+        })
+      } finally {
+        setWpotyConfigLoading(false)
+      }
+    }
+
     loadNewsData()
     loadFeaturedImages()
+    loadWPOYConfig()
   }, [])
 
   useEffect(() => {
@@ -477,7 +505,16 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div className={`w-2 h-2 rounded-full animate-pulse ${
+              wpotyConfig?.isAnnounced 
+                ? (() => {
+                    const today = new Date()
+                    const deadline = new Date(wpotyConfig.submissionDeadline)
+                    const isDeadlinePassed = today > deadline
+                    return isDeadlinePassed ? 'bg-red-500' : 'bg-green-500'
+                  })()
+                : 'bg-primary'
+            }`}></div>
             <span className="text-sm font-medium">Competition</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -488,13 +525,61 @@ export default function HomePage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl" style={{ backgroundColor: '#F0A641' }}>
-              <span className="relative z-10">ENTER THE COMPETITION</span>
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
-            </button>
-            <button className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            {(() => {
+              if (!wpotyConfig?.isAnnounced) {
+                // Competition not announced - Show coming soon button
+                return (
+                  <button className="group relative px-8 py-4 text-gray-400 font-semibold rounded-xl transition-all duration-300 shadow-2xl cursor-not-allowed" style={{ backgroundColor: '#f3f4f6' }}>
+                    <span className="relative z-10 flex items-center justify-center">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      COMING SOON
+                    </span>
+                  </button>
+                )
+              } else {
+                const today = new Date()
+                const deadline = new Date(wpotyConfig.submissionDeadline)
+                const isDeadlinePassed = today > deadline
+                
+                if (isDeadlinePassed) {
+                  // Deadline passed - Show disabled button
+                  return (
+                    <button className="group relative px-8 py-4 text-gray-400 font-semibold rounded-xl transition-all duration-300 shadow-2xl cursor-not-allowed" style={{ backgroundColor: '#f3f4f6' }}>
+                      <span className="relative z-10 flex items-center justify-center">
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        SUBMISSIONS CLOSED
+                      </span>
+                    </button>
+                  )
+                } else {
+                  // Deadline not passed - Show active button
+                  return (
+                    <a 
+                      href={wpotyConfig.googleSheetLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                      style={{ backgroundColor: '#F0A641' }}
+                    >
+                      <span className="relative z-10 flex items-center justify-center">
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        ENTER THE COMPETITION
+                      </span>
+                      <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
+                    </a>
+                  )
+                }
+              }
+            })()}
+            <Link to="/wpoty" className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
               <span className="relative z-10">WINNERS</span>
-            </button>
+            </Link>
           </div>
           
           {/* Exhibition Gallery Grid */}
