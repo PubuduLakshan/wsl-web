@@ -38,7 +38,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
   // Load news data from JSON file
   let newsData: NewsItem[] = []
   try {
-    const response = await fetch('http://localhost:3000/news.json')
+    const response = await fetch('/news.json')
     if (response.ok) {
       newsData = await response.json()
     }
