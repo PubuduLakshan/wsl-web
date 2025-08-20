@@ -1,0 +1,32 @@
+{
+  "featuredImages": [
+    {
+      "id": 1,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/1.png?auto=format&fit=crop&w=600&q=80",
+      "alt": "Wildlife Photography 1",
+      "title": "Wildlife Photography",
+      "description": "Capturing nature's beauty"
+    },
+    {
+      "id": 2,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/2.png?auto=format&fit=crop&w=600&q=80",
+      "alt": "Wildlife Photography 2",
+      "title": "Conservation Story",
+      "description": "Preserving wildlife"
+    },
+    {
+      "id": 3,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/3.png?auto=format&fit=crop&w=600&q=80",
+      "alt": "Wildlife Photography 3",
+      "title": "Nature's Wonders",
+      "description": "Exploring biodiversity"
+    },
+    {
+      "id": 4,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/4.png?auto=format&fit=crop&w=600&q=80",
+      "alt": "Wildlife Photography 4",
+      "title": "Wildlife Moments",
+      "description": "Timeless captures"
+    }
+  ]
+}

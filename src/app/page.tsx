@@ -18,31 +18,21 @@ interface NewsItem {
   content?: string;
 }
 
-const featuredImages = [
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
-]
-
-const competitionCategories = [
-  { title: 'Wildlife Portrait', description: 'Capture the essence of Sri Lanka\'s wildlife in stunning portraits' },
-  { title: 'Landscape', description: 'Showcase the diverse landscapes and natural beauty of the island' },
-  { title: 'Conservation Story', description: 'Tell stories of conservation efforts and environmental awareness' },
-  { title: 'Underwater', description: 'Explore the marine biodiversity of Sri Lanka\'s coastal waters' },
-]
-
-const testimonials = [
-  { name: 'Sarah Johnson', role: '2024 Winner', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80', quote: 'The Wild Sri Lanka competition opened my eyes to the incredible biodiversity of this beautiful island.' },
-  { name: 'Michael Chen', role: 'Professional Photographer', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80', quote: 'This platform has given me the opportunity to showcase Sri Lanka\'s wildlife to the world.' },
-  { name: 'Priya Fernando', role: 'Conservationist', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80', quote: 'Through photography, we can inspire others to protect our natural heritage.' },
-]
+// Featured images will be loaded from JSON
 
 interface Winner {
   name: string;
   category: string;
   image: string;
   competitionCategory: 'Open' | 'Junior';
+}
+
+interface FeaturedImage {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
 }
 
 
@@ -59,6 +49,10 @@ export default function HomePage() {
   // Hero slides data - will be loaded from JSON
   const [heroSlides, setHeroSlides] = useState<any[]>([])
   const [heroSlidesLoading, setHeroSlidesLoading] = useState(true)
+  
+  // Featured images data - will be loaded from JSON
+  const [featuredImages, setFeaturedImages] = useState<FeaturedImage[]>([])
+  const [featuredImagesLoading, setFeaturedImagesLoading] = useState(true)
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
@@ -114,7 +108,53 @@ export default function HomePage() {
       }
     }
 
+    const loadFeaturedImages = async () => {
+      try {
+        const response = await fetch('/featured-images.json')
+        if (response.ok) {
+          const data = await response.json()
+          setFeaturedImages(data.featuredImages)
+        }
+      } catch (error) {
+        console.error('Error loading featured images:', error)
+        // Fallback featured images if JSON loading fails
+        setFeaturedImages([
+          {
+            id: 1,
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/1.png?auto=format&fit=crop&w=600&q=80",
+            alt: "Wildlife Photography 1",
+            title: "Wildlife Photography",
+            description: "Capturing nature's beauty"
+          },
+          {
+            id: 2,
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/2.png?auto=format&fit=crop&w=600&q=80",
+            alt: "Wildlife Photography 2",
+            title: "Conservation Story",
+            description: "Preserving wildlife"
+          },
+          {
+            id: 3,
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/3.png?auto=format&fit=crop&w=600&q=80",
+            alt: "Wildlife Photography 3",
+            title: "Nature's Wonders",
+            description: "Exploring biodiversity"
+          },
+          {
+            id: 4,
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/4.png?auto=format&fit=crop&w=600&q=80",
+            alt: "Wildlife Photography 4",
+            title: "Wildlife Moments",
+            description: "Timeless captures"
+          }
+        ])
+      } finally {
+        setFeaturedImagesLoading(false)
+      }
+    }
+
     loadNewsData()
+    loadFeaturedImages()
   }, [])
 
   useEffect(() => {
@@ -410,12 +450,22 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {featuredImages.slice(0, 4).map((src, idx) => (
-                <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg">
-                  <img src={src} alt={`Wildlife ${idx + 1}`} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {featuredImagesLoading ? (
+                <div className="col-span-2 flex justify-center items-center py-20">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
                 </div>
-              ))}
+              ) : (
+                featuredImages.slice(0, 4).map((image) => (
+                  <div key={image.id} className="group relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src={image.src} 
+                      alt={image.alt} 
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </div>

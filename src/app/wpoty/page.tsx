@@ -27,6 +27,7 @@ interface GalleryImage {
   alt: string;
   title: string;
   description: string;
+  year: number;
 }
 
 export default function WPOYPage() {
@@ -42,11 +43,19 @@ export default function WPOYPage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedWinner, setSelectedWinner] = useState<Winner | null>(null)
   const [isWinnerModalOpen, setIsWinnerModalOpen] = useState(false)
+  const [galleryFilter, setGalleryFilter] = useState<'all' | number>('all')
   
   const currentWinners = winnersByYearAndCategory[selectedYear]?.[selectedCategory] || []
   const availableYears = Object.keys(winnersByYearAndCategory).map(Number).sort((a, b) => b - a)
   const minYear = availableYears.length > 0 ? Math.min(...availableYears) : 2024
   const maxYear = availableYears.length > 0 ? Math.max(...availableYears) : 2024
+
+  // Gallery filtering
+  const filteredGalleryImages = galleryFilter === 'all' 
+    ? galleryImages 
+    : galleryImages.filter(image => image.year === galleryFilter)
+  
+  const galleryYears = [...new Set(galleryImages.map(image => image.year))].sort((a, b) => b - a)
 
   useEffect(() => {
     const loadWinnersData = async () => {
@@ -117,14 +126,16 @@ export default function WPOYPage() {
             src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
             alt: "Leopard in tree with person observing",
             title: "Wildlife Photography",
-            description: "Capturing nature's essence"
+            description: "Capturing nature's essence",
+            year: 2024
           },
           {
             id: 2,
             src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
             alt: "Indoor exhibition with people viewing photos",
             title: "Gallery Exhibition",
-            description: "Showcasing talent"
+            description: "Showcasing talent",
+            year: 2024
           }
         ])
       } finally {
@@ -566,6 +577,35 @@ export default function WPOYPage() {
             <h2 className="text-4xl font-bold text-black mb-4">GALLERY</h2>
             <div className="w-24 h-1 bg-primary"></div>
           </div>
+
+          {/* Gallery Filter */}
+          <div className="mb-8">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button
+                onClick={() => setGalleryFilter('all')}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  galleryFilter === 'all'
+                    ? 'bg-primary text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                }`}
+              >
+                All Years
+              </button>
+              {galleryYears.map((year) => (
+                <button
+                  key={year}
+                  onClick={() => setGalleryFilter(year)}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    galleryFilter === year
+                      ? 'bg-primary text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  }`}
+                >
+                  {year}
+                </button>
+              ))}
+            </div>
+          </div>
           
           {/* Optimized Gallery Grid */}
           <div className="mb-12">
@@ -575,7 +615,7 @@ export default function WPOYPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                {galleryImages.map((image) => (
+                {filteredGalleryImages.map((image) => (
                   <div 
                     key={image.id}
                     className="group relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500 cursor-pointer"
