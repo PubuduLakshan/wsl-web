@@ -1,26 +1,40 @@
 {
   "boardOfficials": [
     {
-      "id": "niro-genzarry-president",
-      "name": "Niro Genzarry",
+      "id": "raveendra-siriwardene-president",
+      "name": "RAVEENDRA SIRIWARDENE",
       "position": "President",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "bio": "Raveendra is an experienced wildlife photographer and researcher focused on leopards in Sri Lanka. He co-founded the Yala Leopard Diary, Wild Tuskers of Sri Lanka, the Yala Leopard Centre in Yala National Park, and the Hill Country Leopard Conservation Initiative. His significant contribution to the Leopard Research Team, which pioneered the Multipoint Leopard Identification method, is a monumental achievement. This innovative identification technique ensures accurate leopard identification, addressing the issue of overestimating leopard populations in Sri Lanka. Raveendra's commitment to wildlife photography has earned him prestigious awards.",      "website": "https://clarahuel.com",
+      "facebook": "https://facebook.com/clarahuel",
+      "instagram": "https://instagram.com/clarahuel",
+      "galleryImages": [
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/1.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/2.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/3.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/4.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/5.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/6.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/7.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/8.png",
+        "https://dm7ldj21i44fm.cloudfront.net/img/team/Raveendra/9.png"
+      ]
     },
     {
       "id": "clara-huel-vice-president",
       "name": "Clara Huel",
       "position": "Vice President",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786",
       "bio": "Clara Huel is a passionate wildlife photographer and conservation advocate with over 10 years of experience in documenting Sri Lanka's diverse ecosystems. Her work has been featured in numerous international publications and she has received multiple awards for her contributions to wildlife photography. Clara specializes in bird photography and has documented over 200 species native to Sri Lanka.",
       "website": "https://clarahuel.com",
       "facebook": "https://facebook.com/clarahuel",
       "instagram": "https://instagram.com/clarahuel",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80"
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca",
+        "https://images.unsplash.com/photo-1541961017774-22349e4a1262"
       ]
     },
     {
@@ -28,15 +42,15 @@
       "name": "Max Collins",
       "position": "Secretary",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
       "bio": "Max Collins is a dedicated conservationist and wildlife photographer who has been working with Wild Sri Lanka for over 8 years. His expertise lies in landscape photography and he has captured some of the most stunning natural scenes across Sri Lanka's national parks and wildlife sanctuaries.",
       "website": "https://maxcollinsphotography.com",
       "facebook": "https://facebook.com/maxcollins",
       "instagram": "https://instagram.com/maxcollins",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80"
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+        "https://images.unsplash.com/photo-1518837695005-2083093ee35b"
       ]
     },
     {
@@ -44,21 +58,21 @@
       "name": "Niro Genzarry",
       "position": "Treasurer",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       "id": "clara-huel-board-member-1",
       "name": "Clara Huel",
       "position": "Board Member",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786",
     "instagram": "https://instagram.com/maxcollins",
       "galleryImages": [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+        "https://images.unsplash.com/photo-1518837695005-2083093ee35b",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
       ]
     },
     {
@@ -66,49 +80,49 @@
       "name": "Max Collins",
       "position": "Board Member",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
     },
     {
       "id": "niro-genzarry-board-member-1",
       "name": "Niro Genzarry",
       "position": "Board Member",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       "id": "clara-huel-board-member-2",
       "name": "Clara Huel",
       "position": "Board Member",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
     },
     {
       "id": "max-collins-board-member-2",
       "name": "Max Collins",
       "position": "Board Member",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
     },
     {
       "id": "niro-genzarry-board-member-2",
       "name": "Niro Genzarry",
       "position": "Board Member",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       "id": "clara-huel-board-member-3",
       "name": "Clara Huel",
       "position": "Board Member",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
     },
     {
       "id": "max-collins-board-member-3",
       "name": "Max Collins",
       "position": "Board Member",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
     }
   ],
   "moderaTeam": [
@@ -116,31 +130,31 @@
       "id": "niro-genzarry-moderator-1",
       "name": "Niro Genzarry",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       "id": "clara-huel-moderator-1",
       "name": "Clara Huel",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
     },
     {
       "id": "max-collins-moderator-1",
       "name": "Max Collins",
       "email": "m.collins@team.collection",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
     },
     {
       "id": "niro-genzarry-moderator-2",
       "name": "Niro Genzarry",
       "email": "nina.genzarry@team.collection",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     },
     {
       "id": "clara-huel-moderator-2",
       "name": "Clara Huel",
       "email": "clara.huel@team.collection",
-      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80"
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786"
     }
   ]
 } 
