@@ -60,11 +60,25 @@ export function Navbar() {
 
       {/* Desktop Navigation - Hidden on Mobile */}
       <div className="hidden lg:flex items-center gap-6 md:gap-8">
-        <Link to="/" className={getLinkClasses('/')}>
+        <Link 
+          to="/" 
+          className={getLinkClasses('/')}
+          onClick={() => {
+            // Scroll to top when navigating to home page
+            window.scrollTo(0, 0)
+          }}
+        >
           HOME
           <div className={getUnderlineClasses('/')}></div>
         </Link>
-        <Link to="/wpoty" className={getLinkClasses('/wpoty')}>
+        <Link 
+          to="/wpoty" 
+          className={getLinkClasses('/wpoty')}
+          onClick={() => {
+            // Scroll to top when navigating to wpoty page
+            window.scrollTo(0, 0)
+          }}
+        >
           <span className="flex items-center">
             WPOTY
             {isWPOYAnnounced && (
@@ -75,7 +89,14 @@ export function Navbar() {
           </span>
           <div className={getUnderlineClasses('/wpoty')}></div>
         </Link>
-        <Link to="/events" className={getLinkClasses('/events')}>
+        <Link 
+          to="/events" 
+          className={getLinkClasses('/events')}
+          onClick={() => {
+            // Scroll to top when navigating to events page
+            window.scrollTo(0, 0)
+          }}
+        >
           <span className="flex items-center">
             EVENTS
             {hasEventsToday && (
@@ -84,21 +105,49 @@ export function Navbar() {
           </span>
           <div className={getUnderlineClasses('/events')}></div>
         </Link>
-        <Link to="/projects" className={getLinkClasses('/projects')}>
+        <Link 
+          to="/projects" 
+          className={getLinkClasses('/projects')}
+          onClick={() => {
+            // Scroll to top when navigating to projects page
+            window.scrollTo(0, 0)
+          }}
+        >
           <span className="flex items-center">
             PROJECTS
           </span>
           <div className={getUnderlineClasses('/projects')}></div>
         </Link>
-        <Link to="/news" className={getLinkClasses('/news')}>
+        <Link 
+          to="/news" 
+          className={getLinkClasses('/news')}
+          onClick={() => {
+            // Scroll to top when navigating to news page
+            window.scrollTo(0, 0)
+          }}
+        >
           NEWS
           <div className={getUnderlineClasses('/news')}></div>
         </Link>
-        <Link to="/team" className={getLinkClasses('/team')}>
+        <Link 
+          to="/team" 
+          className={getLinkClasses('/team')}
+          onClick={() => {
+            // Scroll to top when navigating to team page
+            window.scrollTo(0, 0)
+          }}
+        >
           OUR TEAM
           <div className={getUnderlineClasses('/team')}></div>
         </Link>
-        <Link to="/about-us" className={getLinkClasses('/about-us')}>
+        <Link 
+          to="/about-us" 
+          className={getLinkClasses('/about-us')}
+          onClick={() => {
+            // Scroll to top when navigating to about-us page
+            window.scrollTo(0, 0)
+          }}
+        >
           ABOUT US
           <div className={getUnderlineClasses('/about-us')}></div>
         </Link>
@@ -143,10 +192,26 @@ export function Navbar() {
             {/* Mobile Menu Links */}
             <div className="flex-1 flex flex-col justify-center px-6 py-8 bg-black">
               <div className="space-y-4">
-                <Link to="/" className={getMobileLinkClasses('/')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/" 
+                  className={getMobileLinkClasses('/')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to home page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="text-lg font-semibold">HOME</span>
                 </Link>
-                <Link to="/wpoty" className={getMobileLinkClasses('/wpoty')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/wpoty" 
+                  className={getMobileLinkClasses('/wpoty')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to wpoty page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="flex items-center text-lg font-semibold">
                     WPOTY
                     {isWPOYAnnounced && (
@@ -156,7 +221,15 @@ export function Navbar() {
                     )}
                   </span>
                 </Link>
-                <Link to="/events" className={getMobileLinkClasses('/events')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/events" 
+                  className={getMobileLinkClasses('/events')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to events page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="flex items-center text-lg font-semibold">
                     EVENTS
                     {hasEventsToday && (
@@ -164,16 +237,48 @@ export function Navbar() {
                     )}
                   </span>
                 </Link>
-                <Link to="/projects" className={getMobileLinkClasses('/projects')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/projects" 
+                  className={getMobileLinkClasses('/projects')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to projects page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="text-lg font-semibold">PROJECTS</span>
                 </Link>
-                <Link to="/news" className={getMobileLinkClasses('/news')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/news" 
+                  className={getMobileLinkClasses('/news')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to news page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="text-lg font-semibold">NEWS</span>
                 </Link>
-                <Link to="/team" className={getMobileLinkClasses('/team')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/team" 
+                  className={getMobileLinkClasses('/team')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to team page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="text-lg font-semibold">OUR TEAM</span>
                 </Link>
-                <Link to="/about-us" className={getMobileLinkClasses('/about-us')} onClick={toggleMobileMenu}>
+                <Link 
+                  to="/about-us" 
+                  className={getMobileLinkClasses('/about-us')} 
+                  onClick={() => {
+                    toggleMobileMenu()
+                    // Scroll to top when navigating to about-us page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   <span className="text-lg font-semibold">ABOUT US</span>
                 </Link>
               </div>

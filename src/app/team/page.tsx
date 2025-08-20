@@ -141,6 +141,10 @@ export default function TeamPage() {
                     <Link 
                       to={`/team/${member.id}`}
                       className="block w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200 text-center"
+                      onClick={() => {
+                        // Scroll to top when navigating to team member profile
+                        window.scrollTo(0, 0)
+                      }}
                     >
                       Profile
                     </Link>
@@ -198,6 +202,10 @@ export default function TeamPage() {
                     <Link 
                       to={`/team/${member.id}`}
                       className="block w-full px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200 text-center"
+                      onClick={() => {
+                        // Scroll to top when navigating to team member profile
+                        window.scrollTo(0, 0)
+                      }}
                     >
                       Profile
                     </Link>

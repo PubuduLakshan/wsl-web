@@ -215,6 +215,10 @@ export default function ProjectsPage() {
                     <Link
                       to={`/projects/${project.id}`}
                       className="inline-flex items-center px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300"
+                      onClick={() => {
+                        // Scroll to top when navigating to project detail page
+                        window.scrollTo(0, 0)
+                      }}
                     >
                       View Details
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -62,7 +62,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/news" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/news" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to news page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   News
                 </Link>
               </li>
@@ -113,13 +120,13 @@ export function Footer() {
               © 2024 Wild Sri Lanka. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+              <Link to="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+              <Link to="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+              <Link to="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>

@@ -472,7 +472,15 @@ export default function HomePage() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               In November 2015, a passionate group of photographers, driven by their love for nature and wildlife, laid the foundation for "Wild Sri Lanka." Our community, initially formed on social media, was conceived with a noble vision: to contribute to the conservation of Sri Lankan wildlife and elevate the standard of wildlife photography to an international level.
               </p>
-              <Link to="/about-us" className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg inline-block" style={{ backgroundColor: '#F0A641' }}>
+              <Link 
+                to="/about-us" 
+                className="group relative px-8 py-4 text-black font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg inline-block" 
+                style={{ backgroundColor: '#F0A641' }}
+                onClick={() => {
+                  // Scroll to top when navigating to about-us page
+                  window.scrollTo(0, 0)
+                }}
+              >
                 <span className="relative z-10">Learn More</span>
                 <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: '#d8942e' }}></div>
               </Link>
@@ -924,7 +932,14 @@ export default function HomePage() {
                             </div>
                           </div>
                           
-                          <Link to={`/news/${news.id}`} className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300">
+                          <Link 
+                            to={`/news/${news.id}`} 
+                            className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300"
+                            onClick={() => {
+                              // Scroll to top when navigating to news detail page
+                              window.scrollTo(0, 0)
+                            }}
+                          >
                             <span>Read More</span>
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

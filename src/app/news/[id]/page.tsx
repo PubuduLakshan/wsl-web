@@ -72,7 +72,14 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
             <p className="text-gray-600 mb-6">The article you're looking for doesn't exist.</p>
-            <Link to="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+            <Link 
+              to="/news" 
+              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+              onClick={() => {
+                // Scroll to top when navigating to news page
+                window.scrollTo(0, 0)
+              }}
+            >
               Back to News
             </Link>
           </div>
@@ -109,7 +116,14 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
         <div className="max-w-4xl mx-auto px-4">
           {/* Breadcrumb */}
           <div className="mb-8">
-            <Link to="/news" className="text-primary hover:text-primary-dark transition-colors">
+            <Link 
+              to="/news" 
+              className="text-primary hover:text-primary-dark transition-colors"
+              onClick={() => {
+                // Scroll to top when navigating to news page
+                window.scrollTo(0, 0)
+              }}
+            >
               ← Back to News
             </Link>
           </div>
@@ -187,7 +201,14 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
                 </div>
               </div>
               
-              <Link to="/news" className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+              <Link 
+                to="/news" 
+                className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+                onClick={() => {
+                  // Scroll to top when navigating to news page
+                  window.scrollTo(0, 0)
+                }}
+              >
                 Back to News
               </Link>
             </div>

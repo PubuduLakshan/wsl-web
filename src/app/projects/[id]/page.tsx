@@ -30,6 +30,7 @@ export default function ProjectDetailPage() {
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   useEffect(() => {
     const loadProjectData = async () => {
@@ -58,6 +59,23 @@ export default function ProjectDetailPage() {
       loadProjectData()
     }
   }, [id])
+
+  // Handle Escape key to close modal
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null)
+      }
+    }
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape)
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [selectedImage])
 
   // Function to format date
   const formatDate = (dateString: string) => {
@@ -106,6 +124,10 @@ export default function ProjectDetailPage() {
             <Link
               to="/projects"
               className="inline-flex items-center px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300"
+              onClick={() => {
+                // Scroll to top when navigating back to projects page
+                window.scrollTo(0, 0)
+              }}
             >
               Back to Projects
             </Link>
@@ -228,7 +250,11 @@ export default function ProjectDetailPage() {
                    <h3 className="text-2xl font-bold text-gray-900 mb-6">Project Gallery</h3>
                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                      {project.gallery.map((image, index) => (
-                       <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                       <div 
+                         key={index} 
+                         className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer"
+                         onClick={() => setSelectedImage(image)}
+                       >
                          <img
                            src={image}
                            alt={`Project gallery ${index + 1}`}
@@ -236,7 +262,7 @@ export default function ProjectDetailPage() {
                          />
                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                           <p className="text-white text-sm font-medium">Image {index + 1}</p>
+                           <p className="text-white text-sm font-medium">Click to view</p>
                          </div>
                        </div>
                      ))}
@@ -284,6 +310,10 @@ export default function ProjectDetailPage() {
           <Link
             to="/projects"
             className="inline-flex items-center px-8 py-4 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors duration-300"
+            onClick={() => {
+              // Scroll to top when navigating back to projects page
+              window.scrollTo(0, 0)
+            }}
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -292,6 +322,28 @@ export default function ProjectDetailPage() {
           </Link>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-200 text-2xl font-bold"
+            >
+              ✕
+            </button>
+            <img
+              src={selectedImage}
+              alt="Full size project gallery image"
+              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
 
       <ContactSection />
       <Footer />
