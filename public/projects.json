@@ -2,59 +2,44 @@
   "projects": [
     {
       "id": 1,
-      "title": "Wildlife Conservation Photography Project",
-      "description": "A comprehensive project documenting endangered species in Sri Lanka through photography, contributing to conservation efforts and raising awareness about biodiversity protection. This initiative focuses on capturing high-quality images of rare and threatened species to support research and conservation programs.",
-      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+      "title": "Animal-Treatment-Cage-01",
+      "description": "Animal Treatment Cage handed over to Pandulagama",
+      "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-treatment-cage-1.jpg",
       "category": "Conservation",
-      "status": "Ongoing",
-      "startDate": "2024-01-15",
-      "endDate": "2024-12-31",
-      "location": "Various National Parks",
-      "team": ["Dr. Sarah Johnson", "Prof. Rajith Silva", "Maria Fernandez", "David Chen", "Priya Patel"],
-      "funding": "Rs.50,000",
-      "partners": ["Wildlife Conservation Society", "University of Colombo", "Department of Wildlife Conservation"],
+      "status": "Completed",
+      "startDate": "No content",
+      "endDate": "2023-09-02",
+      "location": "DWC Health Management Division at Pandulagama, Anuradapura",
+      "team": ["Wild Sri Lanka Team"],
+      "funding": "N/A",
+      "partners": ["Inaire (Pvt) Ltd","Health Management Division at Pandulagama"],
       "achievements": [
-        "Documented 15 endangered species",
-        "Published 3 research papers",
-        "Trained 20 local photographers",
-        "Established monitoring protocols",
-        "Created species database"
+        "Donate an Adjustable Animal Treatment Cage"
       ],
       "gallery": [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+        "https://dm7ldj21i44fm.cloudfront.net/img/projects/cage-01/project-cage.jpg",
+        "https://dm7ldj21i44fm.cloudfront.net/img/projects/cage-01/project-cage-01.jpg"
       ]
     },
     {
       "id": 2,
-      "title": "Marine Life Documentation Initiative",
-      "description": "Exploring and documenting the rich marine biodiversity around Sri Lanka's coastal waters, focusing on coral reefs, fish species, and marine mammals. This project uses advanced underwater photography techniques to capture the beauty and diversity of marine ecosystems.",
-      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
-      "category": "Marine Biology",
+      "title": "Animal-Treatment-Cage-02",
+      "description": "Animal Treatment Cage handed over to Galvezland National Park",
+      "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-treatment-cage-2.jpg",
+      "category": "Conservation",
       "status": "Completed",
-      "startDate": "2023-06-01",
-      "endDate": "2024-05-31",
-      "location": "Southern Coast",
-      "team": ["Dr. Michael Chen", "Dr. Priya Patel", "Alex Thompson", "Lisa Wang", "Kumar Perera"],
-      "funding": "$75,000",
-      "partners": ["Marine Biology Institute", "Ocean Conservation Trust", "Coastal Research Center"],
+      "startDate": "No content",
+      "endDate": "2023-10-20",
+      "location": "Galvezland National Park, Nuwara Eliya ",
+      "team": ["Wild Sri Lanka Team","Inaire (Pvt) Ltd"],
+      "funding": "N/A",
+      "partners": ["Galvezland National Park"],
       "achievements": [
-        "Identified 45 new species",
-        "Created marine biodiversity database",
-        "Established monitoring protocols",
-        "Published 2 scientific papers",
-        "Trained 15 marine photographers"
+        "Donate an Adjustable Animal Treatment Cage"
       ],
       "gallery": [
-        "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+        "https://dm7ldj21i44fm.cloudfront.net/img/projects/cage-02/project-cage.jpg",
+        "https://dm7ldj21i44fm.cloudfront.net/img/projects/cage-02/project-cage-02.jpg"
       ]
     },
     {
