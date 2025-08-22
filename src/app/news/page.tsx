@@ -29,10 +29,16 @@ export default function NewsPage() {
           throw new Error('Failed to load news data')
         }
         const data = await response.json()
-        setNewsData(data)
+        // Sort news by date in descending order (newest first)
+        const sortedData = data.sort((a: NewsItem, b: NewsItem) => {
+          const dateA = new Date(a.date).getTime()
+          const dateB = new Date(b.date).getTime()
+          return dateB - dateA // Descending order (newest first)
+        })
+        setNewsData(sortedData)
       } catch (error) {
         console.error('Error loading news data:', error)
-        // Fallback data
+        // Fallback data (already sorted by date in descending order)
         setNewsData([
           {
             id: 1,

@@ -92,22 +92,22 @@ export default function EventsPage() {
       }
     })
     
-    // Sort upcoming events by earliest date
+    // Sort upcoming events by starting date (descending - furthest future first)
     upcoming.sort((a, b) => {
       const aDates = a.dates || (a.date ? [a.date] : [])
       const bDates = b.dates || (b.date ? [b.date] : [])
       const aEarliest = Math.min(...aDates.map(date => new Date(date).getTime()))
       const bEarliest = Math.min(...bDates.map(date => new Date(date).getTime()))
-      return aEarliest - bEarliest
+      return bEarliest - aEarliest // Descending order (furthest future first)
     })
     
-    // Sort past events by most recent date
+    // Sort past events by starting date (descending - most recent first)
     past.sort((a, b) => {
       const aDates = a.dates || (a.date ? [a.date] : [])
       const bDates = b.dates || (b.date ? [b.date] : [])
-      const aLatest = Math.max(...aDates.map(date => new Date(date).getTime()))
-      const bLatest = Math.max(...bDates.map(date => new Date(date).getTime()))
-      return bLatest - aLatest
+      const aEarliest = Math.min(...aDates.map(date => new Date(date).getTime()))
+      const bEarliest = Math.min(...bDates.map(date => new Date(date).getTime()))
+      return bEarliest - aEarliest // Descending order (most recent first)
     })
     
     return { upcoming, past }
@@ -167,10 +167,16 @@ export default function EventsPage() {
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(eventsData?.events.map(event => event.category) || []))]
   
-  // Filter events by category and time
-  const filteredEvents = (activeFilter === 'upcoming' ? upcoming : past).filter(event => 
-    selectedCategory === 'All' || event.category === selectedCategory
-  )
+  // Filter events by category and time, maintaining descending order by starting date
+  const filteredEvents = (activeFilter === 'upcoming' ? upcoming : past)
+    .filter(event => selectedCategory === 'All' || event.category === selectedCategory)
+    .sort((a, b) => {
+      const aDates = a.dates || (a.date ? [a.date] : [])
+      const bDates = b.dates || (b.date ? [b.date] : [])
+      const aEarliest = Math.min(...aDates.map(date => new Date(date).getTime()))
+      const bEarliest = Math.min(...bDates.map(date => new Date(date).getTime()))
+      return bEarliest - aEarliest // Descending order by starting date
+    })
 
   return (
     <>

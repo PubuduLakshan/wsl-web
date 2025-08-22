@@ -73,10 +73,14 @@ export default function ProjectsPage() {
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(projectsData?.projects.map(project => project.category) || []))]
 
-  // Filter projects by category
-  const filteredProjects = projectsData?.projects.filter(project => 
-    selectedCategory === 'All' || project.category === selectedCategory
-  ) || []
+  // Filter projects by category and sort by startDate (newest first)
+  const filteredProjects = projectsData?.projects
+    .filter(project => selectedCategory === 'All' || project.category === selectedCategory)
+    .sort((a, b) => {
+      const dateA = new Date(a.startDate).getTime()
+      const dateB = new Date(b.startDate).getTime()
+      return dateB - dateA // Descending order (newest first)
+    }) || []
 
   if (loading) {
     return (
