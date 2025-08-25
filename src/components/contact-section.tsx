@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import { Logo } from './logo'
 
 export function ContactSection() {
   return (
@@ -16,6 +17,9 @@ export function ContactSection() {
       
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <div className="mb-8">
+          <div className="flex justify-center mb-6">
+            <Logo size="lg" />
+          </div>
           <h2 className="text-4xl font-bold mb-4">REACH US</h2>
           <div className="w-24 h-1 bg-primary"></div>
         </div>

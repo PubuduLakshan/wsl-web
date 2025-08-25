@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useEvents } from './events-context'
 import { useWPOY } from './wpoty-context'
+import { Logo } from './logo'
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -50,12 +51,7 @@ export function Navbar() {
     <nav className="w-full bg-black/90 backdrop-blur-md h-16 sm:h-20 flex items-center justify-between sticky top-0 z-40 px-4 sm:px-6 md:px-8 border-b border-white/20">
       {/* Logo - Left Side */}
       <div className="flex items-center">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white text-xs sm:text-sm font-bold">W</span>
-          </div>
-          <span className="font-bold text-lg sm:text-xl text-white">WILD SRI LANKA</span>
-        </div>
+        <Logo size="md" />
       </div>
 
       {/* Desktop Navigation - Hidden on Mobile */}
@@ -174,10 +170,7 @@ export function Navbar() {
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between p-4 border-b border-white/20 bg-black">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white text-sm font-bold">W</span>
-                </div>
-                <span className="font-bold text-xl text-white">WILD SRI LANKA</span>
+                <Logo size="md" />
               </div>
               <button
                 onClick={toggleMobileMenu}

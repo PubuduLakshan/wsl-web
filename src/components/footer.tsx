@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Logo } from './logo'
 
 export function Footer() {
   return (
@@ -8,11 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white text-sm font-bold">W</span>
-              </div>
-              <span className="font-bold text-xl text-white">WILD SRI LANKA</span>
+            <div className="mb-6">
+              <Logo size="lg" />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Wild Srilanka is dedicated to nature and wildlife photography, managed by Wild Unlimited. 
