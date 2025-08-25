@@ -94,6 +94,20 @@ export default function ProjectDetailPage() {
     }
   }
 
+  // Function to format date range
+  const formatDateRange = (startDate: string, endDate: string) => {
+    const start = new Date(startDate)
+    const end = new Date(endDate)
+    
+    // Check if both dates are valid and the same
+    if (!isNaN(start.getTime()) && !isNaN(end.getTime()) && start.getTime() === end.getTime()) {
+      return formatDate(startDate)
+    }
+    
+    // If dates are different or invalid, show range
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`
+  }
+
   if (loading) {
     return (
       <>
@@ -201,19 +215,21 @@ export default function ProjectDetailPage() {
                     </svg>
                     <div>
                       <p className="text-sm text-gray-500">Duration</p>
-                      <p className="font-semibold text-gray-900">{formatDate(project.startDate)} - {formatDate(project.endDate)}</p>
+                      <p className="font-semibold text-gray-900">{formatDateRange(project.startDate, project.endDate)}</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                    <div>
-                      <p className="text-sm text-gray-500">Funding</p>
-                      <p className="font-semibold text-gray-900">{project.funding}</p>
+                  {project.funding && project.funding !== 'N/A' && project.funding.trim() !== '' && (
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                      </svg>
+                      <div>
+                        <p className="text-sm text-gray-500">Funding</p>
+                        <p className="font-semibold text-gray-900">{project.funding}</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   <div className="flex items-center">
                     <svg className="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

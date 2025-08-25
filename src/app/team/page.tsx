@@ -114,7 +114,7 @@ export default function TeamPage() {
                   
                   {/* Position Badge */}
                   {member.position && (
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute bottom-4 left-4">
                       <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-primary text-sm font-semibold shadow-lg">
                         <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
                         {member.position}
@@ -176,7 +176,7 @@ export default function TeamPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   {/* Role Badge */}
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute bottom-4 left-4">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-gray-700 text-sm font-semibold shadow-lg">
                       <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
                       Moderator

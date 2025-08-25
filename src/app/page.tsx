@@ -383,18 +383,18 @@ export default function HomePage() {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center h-screen">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-screen">
             {/* Text Content - Left Side */}
             <div className="text-white">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6">
                 <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#F0A641' }}></div>
                 <span className="text-sm font-medium">{heroSlides[currentHeroSlide].badge}</span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white whitespace-pre-line">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white whitespace-pre-line break-words">
                 {heroSlides[currentHeroSlide].title}
               </h1>
-              <p className="text-xl mb-10 text-gray-300 max-w-lg leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 text-gray-300 max-w-lg leading-relaxed">
                 {heroSlides[currentHeroSlide].description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -417,10 +417,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows - Hidden on mobile */}
         <button 
           onClick={() => setCurrentHeroSlide(currentHeroSlide === 0 ? heroSlides.length - 1 : currentHeroSlide - 1)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-primary text-white border border-white/20 hover:border-primary transition-all duration-300 backdrop-blur-sm"
+          className="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-primary text-white border border-white/20 hover:border-primary transition-all duration-300 backdrop-blur-sm"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -429,7 +429,7 @@ export default function HomePage() {
         
         <button 
           onClick={() => setCurrentHeroSlide(currentHeroSlide === heroSlides.length - 1 ? 0 : currentHeroSlide + 1)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black/50 hover:bg-primary text-white border border-white/20 hover:border-primary transition-all duration-300 backdrop-blur-sm"
+          className="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full items-center justify-center bg-black/50 hover:bg-primary text-white border border-white/20 hover:border-primary transition-all duration-300 backdrop-blur-sm"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -437,12 +437,12 @@ export default function HomePage() {
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentHeroSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentHeroSlide 
                   ? 'bg-primary scale-125 shadow-lg' 
                   : 'bg-white/50 hover:bg-white/80'
@@ -953,10 +953,10 @@ export default function HomePage() {
               </div>
             </div>
             
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Hidden on mobile */}
             <button 
               onClick={() => setCurrentNewsIndex(Math.max(0, currentNewsIndex - 1))}
-              className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border ${
+              className={`hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 backdrop-blur-sm border ${
                 currentNewsIndex === 0 
                   ? 'bg-gray-800/50 text-gray-400 cursor-not-allowed' 
                   : 'bg-black/50 hover:bg-primary text-white border-white/20 hover:border-primary'
@@ -970,7 +970,7 @@ export default function HomePage() {
             
             <button 
               onClick={() => setCurrentNewsIndex(Math.min(newsData.length - 1, currentNewsIndex + 1))}
-              className={`absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm border ${
+              className={`hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full items-center justify-center transition-all duration-300 backdrop-blur-sm border ${
                 currentNewsIndex === newsData.length - 1 
                   ? 'bg-gray-800/50 text-gray-400 cursor-not-allowed' 
                   : 'bg-black/50 hover:bg-primary text-white border-white/20 hover:border-primary'
