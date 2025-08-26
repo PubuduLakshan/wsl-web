@@ -2,131 +2,364 @@
   "galleryImages": [
     {
       "id": 1,
-      "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
-      "alt": "Leopard in tree with person observing",
-      "title": "Wildlife Photography",
-      "description": "Capturing nature's essence",
-      "year": 2024
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/01.png",
+      "alt": "Mahesh C De Silva",
+      "title": "MERIT",
+      "description": "Mahesh C De Silva",
+      "year": 2018
     },
     {
       "id": 2,
-      "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-      "alt": "Indoor exhibition with people viewing photos",
-      "title": "Gallery Exhibition",
-      "description": "Showcasing talent",
-      "year": 2024
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/02.png",
+      "alt": "IIfham Raji",
+      "title": "MERIT",
+      "description": "Ifham Raji",
+      "year": 2018
     },
     {
       "id": 3,
-      "src": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-      "alt": "Exhibition with Wild Sri Lanka branding",
-      "title": "Conservation Story",
-      "description": "Preserving nature",
-      "year": 2023
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/03.png",
+      "alt": "Chamal Jayasekara",
+      "title": "MERIT",
+      "description": "Chamal Jayasekara",
+      "year": 2018
     },
     {
       "id": 4,
-      "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80",
-      "alt": "Group of men with Wild Sri Lanka bags",
-      "title": "Team Event",
-      "description": "Community gathering",
-      "year": 2023
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/04.png",
+      "alt": "Janaka Bandara",
+      "title": "MERIT",
+      "description": "Janaka Bandara",
+      "year": 2018
     },
     {
       "id": 5,
-      "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-      "alt": "Gallery with framed nature photographs",
-      "title": "Art Gallery",
-      "description": "Framed masterpieces",
-      "year": 2023
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/05.png",
+      "alt": "GChamin Srinath",
+      "title": "MERIT",
+      "description": "Chamin Srinath",
+      "year": 2018
     },
     {
       "id": 6,
-      "src": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80",
-      "alt": "Man in green shirt viewing photographs",
-      "title": "Visitor Experience",
-      "description": "Engaging displays",
-      "year": 2022
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/06.png",
+      "alt": "Sulakna Obeysekara",
+      "title": "MERIT",
+      "description": "Sulakna Obeysekara",
+      "year": 2018
     },
     {
       "id": 7,
-      "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
-      "alt": "Man with red backpack viewing gallery",
-      "title": "Photography Exhibition",
-      "description": "Celebrating wildlife",
-      "year": 2022
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/07.png",
+      "alt": "Pandula Bandara",
+      "title": "MERIT",
+      "description": "Pandula Bandara",
+      "year": 2018
     },
     {
       "id": 8,
-      "src": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
-      "alt": "Elephant in natural habitat",
-      "title": "Elephant Family",
-      "description": "Majestic wildlife",
-      "year": 2022
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/08.png",
+      "alt": "Kamalawarna Herath",
+      "title": "MERIT",
+      "description": "Kamalawarna Herath",
+      "year": 2018
     },
     {
       "id": 9,
-      "src": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=600&q=80",
-      "alt": "Bird in flight",
-      "title": "Bird Photography",
-      "description": "Avian beauty",
-      "year": 2021
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/09.png",
+      "alt": " Wasiri Gajaman",
+      "title": "MERIT",
+      "description": "Wasiri Gajaman",
+      "year": 2018
     },
     {
       "id": 10,
-      "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
-      "alt": "Leopard in natural environment",
-      "title": "Leopard Portrait",
-      "description": "Rare wildlife capture",
-      "year": 2021
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2018/merit-2018/10.png",
+      "alt": "Sivaneswaran Chandrasekaran",
+      "title": "MERIT",
+      "description": "Sivaneswaran Chandrasekaran",
+      "year": 2018
     },
     {
       "id": 11,
-      "src": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=400&q=80",
-      "alt": "Elephant close-up",
-      "title": "Elephant Eye",
-      "description": "Intimate moment",
-      "year": 2021
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/01.png",
+      "alt": "Nishasntha Mallawaarachchi",
+      "title": "MERIT | Cut Down",
+      "description": "Nishasntha Mallawaarachchi",
+      "year": 2019
     },
     {
       "id": 12,
-      "src": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=400&q=80",
-      "alt": "Bird perched",
-      "title": "Bird Perched",
-      "description": "Natural pose",
-      "year": 2020
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/02.png",
+      "alt": "Gayan Pushpakumara",
+      "title": "MERIT | Dawn in Bundala",
+      "description": "Gayan Pushpakumara",
+      "year": 2019
     },
     {
       "id": 13,
-      "src": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-      "alt": "Gallery interior",
-      "title": "Gallery Space",
-      "description": "Exhibition hall",
-      "year": 2020
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/03.png",
+      "alt": "Sachintha Wijenayake | Strange World",
+      "title": "MERIT | Strange World",
+      "description": "Sachintha Wijenayake",
+      "year": 2019
     },
     {
       "id": 14,
-      "src": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-      "alt": "Conservation work",
-      "title": "Conservation",
-      "description": "Protecting nature",
-      "year": 2020
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/06.png",
+      "alt": "Pandula Bandara",
+      "title": "MERIT | Unity",
+      "description": "Pandula Bandara",
+      "year": 2019
     },
     {
       "id": 15,
-      "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80",
-      "alt": "Team collaboration",
-      "title": "Team Work",
-      "description": "Collaboration",
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/04.png",
+      "alt": "Isuru Dayananda ",
+      "title": " MERIT | The Nature's Spotted Ghost",
+      "description": "Isuru Dayananda",
       "year": 2019
     },
     {
       "id": 16,
-      "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-      "alt": "Art display",
-      "title": "Art Display",
-      "description": "Creative showcase",
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/05.png",
+      "alt": "Malika Jayamanna ",
+      "title": "MERIT | The Gang",
+      "description": "Malika Jayamanna",
       "year": 2019
+    },
+    {
+      "id": 17,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/09.png",
+      "alt": "Kamalawarna Herath | One Goal ",
+      "title": "MERIT | One Goal",
+      "description": "Kamalawarna Herath",
+      "year": 2019
+    },
+    {
+      "id": 18,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/07.png",
+      "alt": "Kalana Pradeep  ",
+      "title": "MERIT | Never Underestimate the Power of a Common Man",
+      "description": "Kalana Pradeep ",
+      "year": 2019
+    },
+    {
+      "id": 19,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/08.png",
+      "alt": "Senthi Aathavan",
+      "title": "MERIT | One Head to Lead",
+      "description": "Senthi Aathavan ",
+      "year": 2019
+    },
+    {
+      "id": 20,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2019/merit-2019/10.png",
+      "alt": "Deepal Buddhika",
+      "title": "MERIT | Thirst",
+      "description": "Deepal Buddhika",
+      "year": 2019
+    },
+    {
+      "id": 21,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/01.png",
+      "alt": "H.L. Prasantha Vinod ",
+      "title": "MERIT | Fearless",
+      "description": "H.L. Prasantha Vinod",
+      "year": 2022
+    },
+    {
+      "id": 22,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/10.png",
+      "alt": "Maduranga Prasad ",
+      "title": "MERIT | Dark Shadow",
+      "description": "Maduranga Prasad",
+      "year": 2022
+    },
+    {
+      "id": 23,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/02.png",
+      "alt": "Vibhash Rajarathne | Rainy Days",
+      "title": "MERIT |  Rainy Days",
+      "description": "Vibhash Rajarathne ",
+      "year": 2022
+    },
+    {
+      "id": 24,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/03.png",
+      "alt": "Easa Lebbe Muhammed Jamsith",
+      "title": "MERIT |  Spider in Wonderland",
+      "description": "Easa Lebbe Muhammed Jamsith ",
+      "year": 2022
+    },
+    {
+      "id": 25,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/04.png",
+      "alt": "Dharashan Benjamine Julian ",
+      "title": "MERIT |  Feeding Time",
+      "description": "Dharashan Benjamine Julian ",
+      "year": 2022
+    },
+    {
+      "id": 26,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/05.png",
+      "alt": "Malika Jayamanna  ",
+      "title": "MERIT |  The Tribe",
+      "description": "Malika Jayamanna",
+      "year": 2022
+    },
+    {
+      "id": 27,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/06.png",
+      "alt": "Pathum Bandara | Landing",
+      "title": "MERIT | Landing",
+      "description": "Pathum Bandara",
+      "year": 2022
+    },
+    {
+      "id": 28,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/07.png",
+      "alt": "Ravisara Jayamanna | Final Meal Babies",
+      "title": "MERIT |  Final Meal Babies",
+      "description": "Ravisara Jayamanna",
+      "year": 2022
+    },
+    {
+      "id": 29,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/08.png",
+      "alt": "Hasanthika Malmi",
+      "title": "MERIT |  Spider Expelling Silk",
+      "description": "Hasanthika Malmi",
+      "year": 2022
+    },
+    {
+      "id": 30,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2022/merit-2022/09.png",
+      "alt": "Woshitha Abeysekera ",
+      "title": "MERIT |  Monsoon Magic",
+      "description": "Woshitha Abeysekera",
+      "year": 2022
+    },
+    {
+      "id": 31,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/01.png",
+      "alt": "Sanjaya Madushan Wickramasiri",
+      "title": "MERIT",
+      "description": "Sanjaya Madushan Wickramasiri",
+      "year": 2024
+    },
+    {
+      "id": 32,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/02.png",
+      "alt": "Rajeev Tharinda Perera Abeysekara",
+      "title": "MERIT",
+      "description": "Rajeev Tharinda Perera Abeysekara",
+      "year": 2024
+    },
+    {
+      "id": 33,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/03.png",
+      "alt": "Ravi Rajeev Amarathunga",
+      "title": "MERIT",
+      "description": "Ravi Rajeev Amarathunga",
+      "year": 2024
+    },
+    {
+      "id": 34,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/04.png",
+      "alt": "Jayathu Amarasinghe",
+      "title": "MERIT",
+      "description": "Jayathu Amarasinghe",
+      "year": 2024
+    },
+    {
+      "id": 35,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/05.png",
+      "alt": "Prashanthan Niranjan Yogendranathan",
+      "title": "MERIT",
+      "description": "Prashanthan Niranjan Yogendranathan",
+      "year": 2024
+    },
+    {
+      "id": 36,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/06.png",
+      "alt": "De Vass Gunawardane",
+      "title": "MERIT",
+      "description": "De Vass Gunawardane",
+      "year": 2024
+    },
+    {
+      "id": 37,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/07.png",
+      "alt": "Rajeev Tharinda Perera Abeysekara",
+      "title": "MERIT",
+      "description": "Rajeev Tharinda Perera Abeysekara",
+      "year": 2024
+    },
+    {
+      "id": 38,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/08.png",
+      "alt": "Sujeewa Nishantha Mallawaarachchi",
+      "title": "MERIT",
+      "description": "Sujeewa Nishantha Mallawaarachchi",
+      "year": 2024
+    },
+    {
+      "id": 39,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/09.png",
+      "alt": "Omindu Shehan Kumara Lokuliyana",
+      "title": "MERIT",
+      "description": "Omindu Shehan Kumara Lokuliyana",
+      "year": 2024
+    },
+    {
+      "id": 40,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/open/10.png",
+      "alt": "Sachintha Raneesh Wijenayake",
+      "title": "MERIT",
+      "description": "Sachintha Raneesh Wijenayake",
+      "year": 2024
+    },
+    {
+      "id": 41, 
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/junior/01.png",
+      "alt": "Vinuda Methmitha Hikkaduwa Liyanage",
+      "title": "MERIT | JUNIOR CATEGORY",
+      "description": "Vinuda Methmitha Hikkaduwa Liyanage",
+      "year": 2024
+    },
+    {
+      "id": 42,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/junior/02.png",
+      "alt": "Kavya Anjalika Samarawickrama",
+      "title": "MERIT | JUNIOR CATEGORY",
+      "description": "Kavya Anjalika Samarawickrama",
+      "year": 2024
+    },
+    {
+      "id": 43,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/junior/03.png",
+      "alt": "Kavya Anjalika Samarawickrama",
+      "title": "MERIT | JUNIOR CATEGORY",
+      "description": "Kavya Anjalika Samarawickrama",
+      "year": 2024
+    },
+    {
+      "id": 44,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/junior/04.png",
+      "alt": "Thejana Mandini Samarawickrama",
+      "title": "MERIT | JUNIOR CATEGORY",
+      "description": "Thejana Mandini Samarawickrama",
+      "year": 2024
+    },
+    {
+      "id": 45,
+      "src": "https://dm7ldj21i44fm.cloudfront.net/img/winners/2024/merit-2024/junior/05.png",
+      "alt": "Chathurya Damdini Bandara",
+      "title": "MERIT | JUNIOR CATEGORY",
+      "description": "Chathurya Damdini Bandara",
+      "year": 2024
     }
+
   ]
 }
