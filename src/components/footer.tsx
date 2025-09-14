@@ -45,17 +45,38 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to home page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/wpoty" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/wpoty" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to WPOTY page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   WPOTY
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/projects" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to projects page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   Projects
                 </Link>
               </li>
@@ -72,12 +93,26 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/team" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to team page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/about-us" 
+                  className="text-gray-400 hover:text-primary transition-colors"
+                  onClick={() => {
+                    // Scroll to top when navigating to about us page
+                    window.scrollTo(0, 0)
+                  }}
+                >
                   About Us
                 </Link>
               </li>

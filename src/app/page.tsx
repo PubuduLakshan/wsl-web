@@ -892,7 +892,7 @@ export default function HomePage() {
                     <div className="max-w-4xl mx-auto">
                       <div className="grid md:grid-cols-2 gap-8 items-start">
                         {/* Image Side */}
-                        <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                        <div className="relative overflow-hidden shadow-2xl">
                           <img 
                             src={news.image} 
                             alt={news.title}

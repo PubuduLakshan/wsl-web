@@ -667,7 +667,7 @@ export default function WPOYPage() {
             </button>
 
             {/* Image Container */}
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative bg-white overflow-hidden shadow-2xl">
               <img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
@@ -709,7 +709,7 @@ export default function WPOYPage() {
             </button>
 
             {/* Image Container */}
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative bg-white overflow-hidden shadow-2xl">
               <img
                 src={selectedWinner.image}
                 alt={selectedWinner.name}
