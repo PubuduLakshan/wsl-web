@@ -147,9 +147,15 @@ export default function TeamMemberProfile() {
 
                   {/* Biography */}
                   <div>
-                    <p className="text-gray-600 leading-relaxed text-lg">
-                      {member.bio || `${member.name} is a dedicated member of the Wild Sri Lanka team, contributing their expertise and passion for wildlife photography and conservation. With a commitment to preserving Sri Lanka's natural heritage, they work tirelessly to promote awareness and appreciation for the country's diverse wildlife.`}
-                    </p>
+                    <div className="text-gray-600 leading-relaxed text-lg space-y-4">
+                      {(member.bio || `${member.name} is a dedicated member of the Wild Sri Lanka team, contributing their expertise and passion for wildlife photography and conservation. With a commitment to preserving Sri Lanka's natural heritage, they work tirelessly to promote awareness and appreciation for the country's diverse wildlife.`)
+                        .split('\n\n')
+                        .map((paragraph, index) => (
+                          <p key={index}>
+                            {paragraph}
+                          </p>
+                        ))}
+                    </div>
                   </div>
                 </div>
 
