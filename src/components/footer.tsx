@@ -61,11 +61,11 @@ export function Footer() {
                   to="/wpoty" 
                   className="text-gray-400 hover:text-primary transition-colors"
                   onClick={() => {
-                    // Scroll to top when navigating to WPOTY page
+                    // Scroll to top when navigating to WSLPOTY page
                     window.scrollTo(0, 0)
                   }}
                 >
-                  WPOTY
+                  WSLPOTY
                 </Link>
               </li>
               <li>

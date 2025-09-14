@@ -71,12 +71,12 @@ export function Navbar() {
           to="/wpoty" 
           className={getLinkClasses('/wpoty')}
           onClick={() => {
-            // Scroll to top when navigating to wpoty page
+            // Scroll to top when navigating to WSLPOTY page
             window.scrollTo(0, 0)
           }}
         >
           <span className="flex items-center">
-            WPOTY
+            WSLPOTY
             {isWPOYAnnounced && (
               <span className={`ml-1 w-2 h-2 rounded-full animate-pulse ${
                 isSubmissionClosed ? 'bg-red-500' : 'bg-green-500'
@@ -201,12 +201,12 @@ export function Navbar() {
                   className={getMobileLinkClasses('/wpoty')} 
                   onClick={() => {
                     toggleMobileMenu()
-                    // Scroll to top when navigating to wpoty page
+                    // Scroll to top when navigating to WSLPOTY page
                     window.scrollTo(0, 0)
                   }}
                 >
                   <span className="flex items-center text-lg font-semibold">
-                    WPOTY
+                    WSLPOTY
                     {isWPOYAnnounced && (
                       <span className={`ml-2 w-2 h-2 rounded-full animate-pulse ${
                         isSubmissionClosed ? 'bg-red-500' : 'bg-green-500'

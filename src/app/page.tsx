@@ -125,28 +125,28 @@ export default function HomePage() {
         setFeaturedImages([
           {
             id: 1,
-            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/1.png?auto=format&fit=crop&w=600&q=80",
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/about_1.jpg?auto=format&fit=crop&w=600&q=80",
             alt: "Wildlife Photography 1",
             title: "Wildlife Photography",
             description: "Capturing nature's beauty"
           },
           {
             id: 2,
-            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/2.png?auto=format&fit=crop&w=600&q=80",
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/about_2.jpg?auto=format&fit=crop&w=600&q=80",
             alt: "Wildlife Photography 2",
             title: "Conservation Story",
             description: "Preserving wildlife"
           },
           {
             id: 3,
-            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/3.png?auto=format&fit=crop&w=600&q=80",
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/about_3.jpg?auto=format&fit=crop&w=600&q=80",
             alt: "Wildlife Photography 3",
             title: "Nature's Wonders",
             description: "Exploring biodiversity"
           },
           {
             id: 4,
-            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/4.png?auto=format&fit=crop&w=600&q=80",
+            src: "https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/about_4.jpg?auto=format&fit=crop&w=600&q=80",
             alt: "Wildlife Photography 4",
             title: "Wildlife Moments",
             description: "Timeless captures"
@@ -498,7 +498,15 @@ export default function HomePage() {
                       alt={image.alt} 
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="font-semibold text-lg mb-1">
+                        {image.title}
+                      </h3>
+                      <p className="text-sm text-gray-200">
+                        {image.description}
+                      </p>
+                    </div>
                   </div>
                 ))
               )}
@@ -595,84 +603,84 @@ export default function HomePage() {
             {/* Large tile - spans 6 columns */}
             <div className="md:col-span-6 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_1.jpg?auto=format&fit=crop&w=800&q=80" 
                 alt="Wildlife Portrait" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-xl mb-2">Wildlife Portrait</h3>
-                <p className="text-base text-gray-200">Capturing nature's essence</p>
+                <h3 className="font-semibold text-xl mb-2">WSLPOTY Exhibition</h3>
+                <p className="text-base text-gray-200">Visitors admiring stunning wildlife photographs at the exhibition</p>
               </div>
             </div>
             
             {/* Medium tile - spans 3 columns */}
             <div className="md:col-span-3 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_2.jpg?auto=format&fit=crop&w=600&q=80" 
                 alt="Landscape View" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-lg mb-1">Landscape View</h3>
-                <p className="text-sm text-gray-200">Natural beauty</p>
+                <h3 className="font-semibold text-lg mb-1">News Articles</h3>
+                <p className="text-sm text-gray-200">A national newspaper highlights the Wild Sri Lanka photo competition</p>
               </div>
             </div>
             
             {/* Medium tile - spans 3 columns */}
             <div className="md:col-span-3 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_3.jpg?auto=format&fit=crop&w=600&q=80" 
                 alt="Abstract Art" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-lg mb-1">Abstract Art</h3>
-                <p className="text-sm text-gray-200">Creative expression</p>
+                <h3 className="font-semibold text-lg mb-1">Preparing High</h3>
+                <p className="text-sm text-gray-200">Precision printing ensures every image is exhibition-ready</p>
               </div>
             </div>
             
             {/* Medium tile - spans 3 columns */}
             <div className="md:col-span-3 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_6.jpg?auto=format&fit=crop&w=800&q=80" 
                 alt="Close-up Portrait" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-lg mb-1">Close-up Portrait</h3>
-                <p className="text-sm text-gray-200">Intimate moments</p>
+                <h3 className="font-semibold text-lg mb-1">Interactive Sessions</h3>
+                <p className="text-sm text-gray-200">A wildlife photographer shares insights and experiences</p>
               </div>
             </div>
             
             {/* Medium tile - spans 3 columns */}
             <div className="md:col-span-3 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_5.jpg?auto=format&fit=crop&w=600&q=80" 
                 alt="Mountain View" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-lg mb-1">Mountain View</h3>
-                <p className="text-sm text-gray-200">Majestic landscapes</p>
+                <h3 className="font-semibold text-lg mb-1">Award Ceremony Moment</h3>
+                <p className="text-sm text-gray-200">Winners of the Wild Sri Lanka Photographer of the Year (WSLPOTY)</p>
               </div>
             </div>
             
             {/* Large tile - spans 6 columns */}
             <div className="md:col-span-6 h-80 group relative overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
               <img 
-                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/wslpoty/wslpoty_4.jpg?auto=format&fit=crop&w=800&q=80" 
                 alt="Gallery Exhibition" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-semibold text-xl mb-2">Gallery Exhibition</h3>
-                <p className="text-base text-gray-200">Showcasing talent</p>
+                <h3 className="font-semibold text-xl mb-2">Derana Morning Show</h3>
+                <p className="text-base text-gray-200">Wild Sri Lanka team discussing the 2024 competition on Ada Derana morning show</p>
               </div>
             </div>
           </div>

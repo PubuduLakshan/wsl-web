@@ -276,7 +276,7 @@ export default function WPOYPage() {
                       </div>
                     )
                   })()}
-                  <h3 className="text-2xl font-bold text-white mb-2">Wildlife Photographer of the Year {wpotyConfig.currentYear}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Wild Sri Lanka Photographer of the Year {wpotyConfig.currentYear}</h3>
                   <p className="text-gray-300 mb-6">Submit your best wildlife photographs and compete with photographers worldwide</p>
                   
                   {/* Competition Details */}
@@ -364,7 +364,7 @@ export default function WPOYPage() {
                     <span>Coming Soon</span>
                   </div>
                   <h3 className="text-2xl font-bold text-black mb-2">Competition {wpotyConfig?.currentYear} Announcement</h3>
-                  <p className="text-black mb-6">The Wildlife Photographer of the Year {wpotyConfig?.currentYear} competition will be announced soon. Stay tuned for updates!</p>
+                  <p className="text-black mb-6">The Wild Sri Lanka Photographer of the Year {wpotyConfig?.currentYear} competition will be announced soon. Stay tuned for updates!</p>
                   
                   <div className="bg-white rounded-xl p-6 shadow-lg max-w-md mx-auto">
                     <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">

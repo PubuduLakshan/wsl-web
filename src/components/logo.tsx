@@ -24,7 +24,7 @@ export const Logo: React.FC<LogoProps> = ({
   }
 
   return (
-    <div className={`flex items-center gap-0.5 sm:gap-1 ${className}`}>
+    <div className={`flex items-center ${className}`}>
       {/* Logo Image */}
       <img 
         src="https://dm7ldj21i44fm.cloudfront.net/img/logo/wsl-1.png" 
