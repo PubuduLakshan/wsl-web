@@ -24,7 +24,7 @@ export default function AboutUsPage() {
               In November 2015, a passionate group of photographers, driven by their love for nature and wildlife, laid the foundation for "Wild Sri Lanka." Our community, initially formed on social media, was conceived with a noble vision: to contribute to the conservation of Sri Lankan wildlife and elevate the standard of wildlife photography to an international level.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-              Over the years, our community has experienced remarkable growth, evolving into the largest wildlife photography hub in Sri Lanka, boasting over 49,000 members. Committed to our primary goal of wildlife conservation, we have successfully executed various projects that have become landmarks within the global wildlife photography community.
+              Over the years, our community has experienced remarkable growth, evolving into the largest wildlife photography hub in Sri Lanka, boasting over 60,000 members. Committed to our primary goal of wildlife conservation, we have successfully executed various projects that have become landmarks within the global wildlife photography community.
               </p>
             </div>
             <div>
