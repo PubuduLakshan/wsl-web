@@ -25,7 +25,7 @@ function App() {
             <Route path="/team/:id" element={<TeamMemberProfile />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/news/:id" element={<NewsDetailWrapper />} />
-            <Route path="/wpoty" element={<WpotyPage />} />
+            <Route path="/wslpoty" element={<WpotyPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:id" element={<ProjectDetailPage />} />

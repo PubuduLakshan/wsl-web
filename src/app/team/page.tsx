@@ -10,7 +10,7 @@ interface TeamMember {
   id: string
   name: string
   position?: string
-  email: string
+  email?: string
   image: string
 }
 
@@ -128,13 +128,15 @@ export default function TeamPage() {
                     {member.name}
                   </h3>
                   
-                  <div className="flex items-center text-gray-600 text-sm">
-                    <svg className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span className="truncate">{member.email}</span>
-                  </div>
+                  {member.email && (
+                    <div className="flex items-center text-gray-600 text-sm">
+                      <svg className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                      <span className="truncate">{member.email}</span>
+                    </div>
+                  )}
                   
                   {/* Hover Profile Button */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -189,13 +191,15 @@ export default function TeamPage() {
                     {member.name}
                   </h3>
                   
-                  <div className="flex items-center text-gray-600 text-sm">
-                    <svg className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span className="truncate">{member.email}</span>
-                  </div>
+                  {member.email && (
+                    <div className="flex items-center text-gray-600 text-sm">
+                      <svg className="w-4 h-4 mr-2 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                      <span className="truncate">{member.email}</span>
+                    </div>
+                  )}
                   
                   {/* Hover Profile Button */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -29,7 +29,7 @@ export default function AboutUsPage() {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/main.jpg?auto=format&fit=crop&w=800&q=80" 
                 alt="Our Team" 
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
@@ -95,21 +95,21 @@ export default function AboutUsPage() {
             {/* Row 1 */}
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws1.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Gallery Exhibition" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
             </div>
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws2.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Team Meeting" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
             </div>
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws3.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Award Ceremony" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
@@ -118,21 +118,21 @@ export default function AboutUsPage() {
             {/* Row 2 */}
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws4.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Presentation" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
             </div>
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws5.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Graduation Ceremony" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
             </div>
             <div className="space-y-6">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" 
+                src="https://dm7ldj21i44fm.cloudfront.net/img/aboutUs/ws6.jpg?auto=format&fit=crop&w=400&q=80" 
                 alt="Wildlife Management" 
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />

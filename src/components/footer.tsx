@@ -58,7 +58,7 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  to="/wpoty" 
+                  to="/wslpoty" 
                   className="text-gray-400 hover:text-primary transition-colors"
                   onClick={() => {
                     // Scroll to top when navigating to WSLPOTY page

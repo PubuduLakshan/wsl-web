@@ -68,7 +68,7 @@ export function Navbar() {
           <div className={getUnderlineClasses('/')}></div>
         </Link>
         <Link 
-          to="/wpoty" 
+          to="/wslpoty" 
           className={getLinkClasses('/wpoty')}
           onClick={() => {
             // Scroll to top when navigating to WSLPOTY page
@@ -83,7 +83,7 @@ export function Navbar() {
               }`}></span>
             )}
           </span>
-          <div className={getUnderlineClasses('/wpoty')}></div>
+          <div className={getUnderlineClasses('/wslpoty')}></div>
         </Link>
         <Link 
           to="/events" 
@@ -197,7 +197,7 @@ export function Navbar() {
                   <span className="text-lg font-semibold">HOME</span>
                 </Link>
                 <Link 
-                  to="/wpoty" 
+                  to="/wslpoty" 
                   className={getMobileLinkClasses('/wpoty')} 
                   onClick={() => {
                     toggleMobileMenu()

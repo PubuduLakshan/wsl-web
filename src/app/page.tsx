@@ -237,7 +237,7 @@ export default function HomePage() {
             title: "WILD SRI LANKA\nPHOTOGRAPHER OF THE YEAR 2025",
             description: "Capture the untamed beauty of Sri Lanka's wildlife and compete with photographers worldwide in our prestigious annual competition.",
             primaryButton: "ENTER THE COMPETITION",
-            primaryButtonHref: "/wpoty",
+            primaryButtonHref: "/wslpoty",
             secondaryButton: "VIEW GALLERY",
             secondaryButtonHref: "/events"
           },
@@ -593,7 +593,7 @@ export default function HomePage() {
                 }
               }
             })()}
-            <Link to="/wpoty" className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            <Link to="/wslpoty" className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
               <span className="relative z-10">WINNERS</span>
             </Link>
           </div>
