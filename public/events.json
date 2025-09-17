@@ -6,7 +6,7 @@
       "description": "Sense the Lens Photography Workshop was successfully concluded by our fellow Admin Isuru Praveen Ranasinghe",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-7.jpg",
       "dates": ["2023-08-10"],
-      "location": "D.S Senanayake College Mini Auditorium",
+      "location": "D.S Senanayake College Mini Auditorium, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
     },
@@ -16,7 +16,7 @@
       "description": "Modern Wildlife Photography by Mr.Lakshitha Karunarathna",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-5.png",
       "dates": ["2023-08-01"],
-      "location": "JDA Perera Gallery",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
     },
@@ -26,7 +26,7 @@
       "description": "Leopards & Elephants by Mr.Milinda Wattegedara",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-6.png",
       "dates": ["2023-01-08"],
-      "location": "JDA Perera Gallery",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
     },
@@ -36,7 +36,7 @@
       "description": "Butterfly Photography by Mr.Chathura Udayanga",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-4.png",
       "dates": ["2023-01-07"],
-      "location": "JDA Perera Gallery",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
      
@@ -47,7 +47,7 @@
       "description": "Birding & Bird Photography by Mr. Moditha Hiranya Kodikara Arachchi",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-3.png",
       "dates": ["2023-01-07"],
-      "location": "JDA Perera Gallery",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
      
@@ -59,7 +59,7 @@
       "description": "How Wildlife Photography Helps Conservation?” by Mr.Jayantha Wijesingha",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-2.png",
       "dates": ["2023-01-07"],
-      "location": "JDA Perera Gallery",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "Workshop",
        "price": "Free"
       
@@ -70,7 +70,7 @@
       "description": "Wildlife Conservation and Effects of Climate Change in the South Asia Region by Parvish Pandya",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/news/news-workshop-1.jpg",
       "dates": ["2019-08-17"],
-      "location": "Automobile Association of Ceylon Auditorium",
+      "location": "Automobile Association of Ceylon Auditorium, Sri Lanka",
       "category": "Workshop",
       "price": "Free"
     },
@@ -80,7 +80,7 @@
       "description": " The WPL is undoubtedly the most celebrated sporting solidarity among Sri Lanka's wildlife photographers.",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-08.jpg",
       "dates": ["2023-05-07"],
-      "location": "DS Senanayake College Grounds",
+      "location": "DS Senanayake College Grounds, Sri Lanka",
       "category": "WPL"
       
     },
@@ -90,7 +90,7 @@
       "description": " WILDLIFE PHOTOGRAPHER OF THE YEAR 2018",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-09.JPG",
       "dates": ["No content"],
-      "location": "No content",
+      "location": "Diyasaru Park, Sri Lanka",
       "category": "WSLPOTY"
       
     },
@@ -99,8 +99,8 @@
       "title": "WSLPOTY-2019",
       "description": "WILDLIFE PHOTOGRAPHER OF THE YEAR 2019",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-10.jpg",
-      "dates": ["No content"],
-      "location": "No content",
+      "dates": ["2019-10-19","2019-10-20"],
+      "location": "Diyasaru Park, Sri Lanka",
       "category": "WSLPOTY"
       
     },
@@ -109,7 +109,7 @@
       "title": "WSLPOTY-2022",
       "description": "WILDLIFE PHOTOGRAPHER OF THE YEAR 2022",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-11.jpg",
-      "dates": ["No content"],
+      "dates": ["2022-12-10","2022-12-11"],
       "location": "No content",
       "category": "WSLPOTY"
       
@@ -118,20 +118,20 @@
       "id": 12,
       "title": "WSLPOTY-2024",
       "description": " WILDLIFE PHOTOGRAPHER OF THE YEAR 2024",
-      "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-08.jpg",
-      "dates": ["No content"],
+      "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-13.jpg",
+      "dates": ["2024-05-05","2024-05-06","2024-05-07"],
       "location": "No content",
       "category": "WSLPOTY"
       
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "WSLPOTY-2025",
       "description": " WILDLIFE PHOTOGRAPHER OF THE YEAR 2025",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-12.jpeg",
       "dates": ["2025-09-20","2025-09-21"],
-      "location": "JDA Perera Gallery",
-      "category": "WPL"
+      "location": "JDA Perera Gallery, Sri Lanka",
+      "category": "WSLPOTY"
       
     }
 
