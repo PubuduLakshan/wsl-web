@@ -110,7 +110,7 @@
       "description": "WILDLIFE PHOTOGRAPHER OF THE YEAR 2022",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-11.jpg",
       "dates": ["2022-12-10","2022-12-11"],
-      "location": "No content",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "WSLPOTY"
       
     },
@@ -120,7 +120,7 @@
       "description": " WILDLIFE PHOTOGRAPHER OF THE YEAR 2024",
       "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/Events-13.jpg",
       "dates": ["2024-05-05","2024-05-06","2024-05-07"],
-      "location": "No content",
+      "location": "JDA Perera Gallery, Sri Lanka",
       "category": "WSLPOTY"
       
     },
@@ -133,6 +133,16 @@
       "location": "JDA Perera Gallery, Sri Lanka",
       "category": "WSLPOTY"
       
+    },
+    {
+      "id": 14,
+      "title": "Wildlife Premier League 2026",
+      "description": "The Wild Sri Lanka Premier League (WPL) 2026 is set to take place on September 5, 2026, bringing together cricket enthusiasts for an exciting Indoor Cricket Fiesta. [WPL 2026 - Official Rules](https://dm7ldj21i44fm.cloudfront.net/img/Events/WPL 2026 - Official Rules.pdf)",
+      "image": "https://dm7ldj21i44fm.cloudfront.net/img/Events/wpl_2026_banner.jpeg",
+      "dates": ["2026-09-05"],
+      "location": "4 Band Indoor Cricket Stadium, Kaduwela, Sri Lanka",
+      "category": "WPL",
+      "registerLink": "https://forms.gle/cN6EHeWW276RbaMW9"
     }
 
   ]
