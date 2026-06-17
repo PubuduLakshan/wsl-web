@@ -5,6 +5,7 @@ import { Navbar } from '@/components/header'
 import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
 import { useEvents } from '@/components/events-context'
+import { renderTextWithLinks } from '@/lib/render-links'
 
 interface Event {
   id: number
@@ -22,6 +23,7 @@ interface Event {
   reach?: number
   schools?: number
   duration?: string
+  registerLink?: string
   animals?: number
   publications?: number
   traps?: number
@@ -332,7 +334,7 @@ export default function EventsPage() {
                   </h3>
                   
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {event.description}
+                    {renderTextWithLinks(event.description)}
                   </p>
 
                   {/* Event Details */}
@@ -477,7 +479,7 @@ export default function EventsPage() {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                {selectedEvent.description}
+                {renderTextWithLinks(selectedEvent.description)}
               </p>
 
               {/* Additional Details */}
@@ -527,10 +529,15 @@ export default function EventsPage() {
                 >
                   Close
                 </button>
-                {activeFilter === 'upcoming' && (
-                  <button className="flex-1 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors">
+                {activeFilter === 'upcoming' && selectedEvent.registerLink?.trim() && (
+                  <a
+                    href={selectedEvent.registerLink.trim()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primary-dark transition-colors text-center"
+                  >
                     Register Now
-                  </button>
+                  </a>
                 )}
               </div>
             </div>

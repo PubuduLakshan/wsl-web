@@ -3,6 +3,7 @@ import { Navbar } from '../components/header'
 import { ContactSection } from '../components/contact-section'
 import { Footer } from '../components/footer'
 import { Link } from 'react-router-dom'
+import { renderTextWithLinks } from '../lib/render-links'
 import { useTheme } from '../components/theme-provider'
 
 interface NewsItem {
@@ -923,7 +924,7 @@ export default function HomePage() {
                           </h3>
                           
                           <p className="text-gray-300 text-lg leading-relaxed">
-                            {news.description}
+                            {renderTextWithLinks(news.description, 'text-primary underline hover:text-primary-dark')}
                           </p>
                           
                           <div className="flex items-center justify-between">

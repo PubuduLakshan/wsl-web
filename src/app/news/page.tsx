@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../../components/header'
 import { ContactSection } from '../../components/contact-section'
 import { Footer } from '../../components/footer'
+import { renderTextWithLinks } from '../../lib/render-links'
 
 interface NewsItem {
   id: number
@@ -153,7 +154,7 @@ export default function NewsPage() {
                   </h3>
                   
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {news.description}
+                    {renderTextWithLinks(news.description)}
                   </p>
                   
                   {/* Read More Button */}

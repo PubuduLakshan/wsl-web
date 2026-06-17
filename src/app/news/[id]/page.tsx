@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../../../components/header'
 import { ContactSection } from '../../../components/contact-section'
 import { Footer } from '../../../components/footer'
+import { renderTextWithLinks } from '../../../lib/render-links'
 
 // Generate static params for all news articles
 export async function generateStaticParams() {
@@ -145,7 +146,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
-              {fullContent.description}
+              {renderTextWithLinks(fullContent.description)}
             </p>
           </div>
         </div>
@@ -171,7 +172,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ id:
             <div className="text-gray-700 leading-relaxed space-y-6">
               {fullContent.content?.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="text-lg leading-relaxed">
-                  {paragraph}
+                  {renderTextWithLinks(paragraph)}
                 </p>
               ))}
             </div>

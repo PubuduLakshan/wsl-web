@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Navbar } from './header'
 import { ContactSection } from './contact-section'
 import { Footer } from './footer'
+import { renderTextWithLinks } from '../lib/render-links'
 import { Link } from 'react-router-dom'
 
 interface NewsItem {
@@ -149,7 +150,7 @@ const NewsDetailWrapper = () => {
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
-              {newsItem.description}
+              {renderTextWithLinks(newsItem.description)}
             </p>
           </div>
         </div>
@@ -175,7 +176,7 @@ const NewsDetailWrapper = () => {
             <div className="text-gray-700 leading-relaxed space-y-6">
               {newsItem.content?.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="text-lg leading-relaxed">
-                  {paragraph}
+                  {renderTextWithLinks(paragraph)}
                 </p>
               ))}
             </div>
